@@ -22,7 +22,7 @@
                         Building a Legacy of <br><span class="text-primary">Reliable Relocation</span>
                     </h2>
                     <p class="text-slate-600 text-lg leading-relaxed mb-8">
-                        At DSL Express Packers and Movers, our strategy is built on the foundation of <strong>Brand Growth
+                        At Jasol Packers and Movers, our strategy is built on the foundation of <strong>Brand Growth
                             through Execution</strong>. We don't just plan; we manufacture results. By identifying unique
                         market opportunities and maintaining a rigorous standard of service, we have established ourselves
                         as a leader in the logistics industry.
