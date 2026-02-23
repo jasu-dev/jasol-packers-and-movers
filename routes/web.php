@@ -17,3 +17,6 @@ Route::view('/policies', 'policies')->name('policies');
 
 
 Route::view('/packers-and-movers-hinjewadi', 'cities.hinjewadi')->name('hinjewadi');
+Route::view('/packers-and-movers-wakad', 'cities.wakad')->name('wakad');
+Route::view('/packers-and-movers-baner', 'cities.baner')->name('baner');
+Route::view('/packers-and-movers-mahalunge', 'cities.mahalunge')->name('mahalunge');

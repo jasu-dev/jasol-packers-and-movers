@@ -1,9 +1,9 @@
 @php
     $branches = [
         'packers-and-movers-hinjewadi' => 'Hinjewadi',
-        'wakad' => 'Wakad',
-        'baner' => 'Baner',
-        'mahalunge' => 'Mahalunge',
+        'packers-and-movers-wakad' => 'Wakad',
+        'packers-and-movers-baner' => 'Baner',
+        'packers-and-movers-mahalunge' => 'Mahalunge',
     ];
 @endphp
 

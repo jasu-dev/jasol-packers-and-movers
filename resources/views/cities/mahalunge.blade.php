@@ -17,10 +17,10 @@
                     <div
                         class="inline-flex items-center gap-2 bg-primary/20 text-primary-foreground text-sm font-medium px-4 py-1.5 rounded-full mb-6">
                         <x-icons.location class="w-4 h-4" />
-                        Hinjewadi, Pune
+                        Mahalunge, Pune
                     </div>
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-foreground leading-tight mb-6">
-                        Best <span class="text-primary">Packers and Movers</span> in Hinjewadi, Pune
+                        Best <span class="text-primary">Packers and Movers</span> in Mahalunge, Pune
                     </h1>
                     <p class="text-lg text-secondary-foreground/80 mb-8 max-w-lg">
                         Jasol Packers and Movers in Hinjewadi, Pune offer reliable, safe, and affordable home and office
@@ -90,24 +90,24 @@
                         <h2 class="text-2xl md:text-3xl font-heading font-bold text-foreground mb-6">About Jasol Packers and
                             Movers in Hinjewadi, Pune</h2>
                         <div class="text-foreground/70 space-y-4 leading-relaxed">
-                            <p>
+                            <p class="text-gray-600 leading-relaxed mb-4">
                                 Jasol Packers and Movers in Hinjewadi, Pune is a trusted name in the relocation industry,
                                 offering reliable and professional moving solutions for both residential and commercial
                                 clients. With years of experience and a skilled team of trained staff, we specialize in safe
                                 packing, careful handling, secure loading, and timely transportation of your valuable
                                 belongings.
                             </p>
-                            <p>
+                            <p class="text-gray-600 leading-relaxed mb-4">
                                 Our goal is to make your relocation process smooth, stress-free, and completely hassle-free.
                                 We use high-quality packing materials and modern equipment to ensure that all your household
                                 items, office furniture, electronics, and fragile goods are protected throughout the moving
                                 process.
                             </p>
-                            <p>
+                            <p class="text-gray-600 leading-relaxed mb-4">
                                 Whether you are shifting locally within Hinjewadi or planning a long-distance move, our
                                 customized relocation services are designed to meet your specific needs and budget.
                             </p>
-                            <p>
+                            <p class="text-gray-600 leading-relaxed">
                                 At Jasol Packers and Movers, we focus on customer satisfaction by providing on-time
                                 delivery, transparent pricing, and end-to-end logistics support. From packing and loading to
                                 unloading and unpacking, our dedicated team takes care of every step with professionalism
@@ -286,7 +286,7 @@
 
     {{-- Why Choose Us Section --}}
     <section class="section-padding bg-gray-50">
-        <div class="container mx-auto">
+        <div class="container mx-auto max-w-6xl px-4">
 
             <div class="text-center mb-12" data-aos="fade-up">
                 <h2 class="section-title">Why Choose Jasol Packers and Movers in Hinjewadi, Pune?</h2>
