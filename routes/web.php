@@ -14,3 +14,6 @@ Route::view('/testimonials', 'testimonials')->name('testimonials');
 Route::view('/contact', 'contact')->name('contact');
 
 Route::view('/policies', 'policies')->name('policies');
+
+
+Route::view('/packers-and-movers-hinjewadi', 'cities.hinjewadi')->name('hinjewadi');

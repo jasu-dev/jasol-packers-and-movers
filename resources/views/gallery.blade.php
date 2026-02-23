@@ -18,40 +18,98 @@
 
     <section class="py-16">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 @php
                     $images = [
                         [
-                            'src' => 'https://images.unsplash.com/photo-1600518464441-9154a4dea21b?w=600',
-                            'alt' => 'Professional packing service',
+                            'url' => 'assets/images/gallery/bick-transport.jpg',
+                            'title' => 'Secure Bike Transport',
+                            'alt' => 'Jasol Packers specialized motorcycle transportation in a secure carrier',
                         ],
                         [
-                            'src' => 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600',
-                            'alt' => 'Moving truck loaded',
+                            'url' => 'assets/images/gallery/bike-packing.jpg',
+                            'title' => 'Professional Bike Packing',
+                            'alt' => 'Multi-layer protective bubble wrap packing for two-wheelers',
                         ],
                         [
-                            'src' => 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600',
-                            'alt' => 'Boxes ready for moving',
+                            'url' => 'assets/images/gallery/bike-transport-loaded.jpg',
+                            'title' => 'Vehicle Loading',
+                            'alt' => 'Bikes securely loaded and fastened in a transit truck for relocation',
                         ],
                         [
-                            'src' => 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=600',
-                            'alt' => 'New home setup',
+                            'url' => 'assets/images/gallery/boxes.jpg',
+                            'title' => 'Packing Materials',
+                            'alt' => 'High-quality corrugated boxes and packing sheets used by Jasol Packers',
                         ],
                         [
-                            'src' => 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600',
-                            'alt' => 'Office relocation',
+                            'url' => 'assets/images/gallery/jasol-packers-movers.jpg',
+                            'title' => 'Expert Moving Team',
+                            'alt' => 'Professional staff of Jasol Packers and Movers handling a relocation project',
                         ],
                         [
-                            'src' => 'https://images.unsplash.com/photo-1600573472591-ee6981cf81f0?w=600',
-                            'alt' => 'Furniture wrapped and ready',
+                            'url' => 'assets/images/gallery/jasol-packers.jpg',
+                            'title' => 'Household Packing',
+                            'alt' => 'Expert packing services for household goods and furniture',
                         ],
                         [
-                            'src' => 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600',
-                            'alt' => 'Delivered safely',
+                            'url' => 'assets/images/gallery/packages.jpeg',
+                            'title' => 'Securely Sealed Packages',
+                            'alt' => 'Packed items sealed with heavy-duty tape and protective wrap',
                         ],
                         [
-                            'src' => 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600',
-                            'alt' => 'Team at work',
+                            'url' => 'assets/images/gallery/packed-parcels.jpg',
+                            'title' => 'Parcel Services',
+                            'alt' => 'Consolidated parcels ready for long-distance domestic transport',
+                        ],
+                        [
+                            'url' => 'assets/images/gallery/packed-parcles.jpg',
+                            'title' => 'Inventory Management',
+                            'alt' => 'Organized inventory of packed parcels ready for lifting',
+                        ],
+                        [
+                            'url' => 'assets/images/gallery/packers-movers-chinchead.jpg',
+                            'title' => 'Professional Handling',
+                            'alt' => 'Trained movers managing fragile items during the loading process',
+                        ],
+                        [
+                            'url' => 'assets/images/gallery/packers-in-baners.jpg',
+                            'title' => 'Local Shifting Services',
+                            'alt' => 'Jasol Packers providing local relocation services in the Baner area',
+                        ],
+                        [
+                            'url' => 'assets/images/gallery/packers-and-movers-truck.jpg',
+                            'title' => 'Reliable Transport Vehicle',
+                            'alt' => 'Jasol Packers and Movers dedicated closed-body container truck',
+                        ],
+                        [
+                            'url' => 'assets/images/gallery/packing-foam-sheet.jpg',
+                            'title' => 'Shock-Proof Protection',
+                            'alt' => 'EPE foam sheets used for shock-proofing electronic and fragile items',
+                        ],
+                        [
+                            'url' => 'assets/images/gallery/packing-wale.jpg',
+                            'title' => 'Skilled Packers',
+                            'alt' => 'Experienced packing team ensuring damage-free household shifting',
+                        ],
+                        [
+                            'url' => 'assets/images/gallery/packing.jpg',
+                            'title' => 'Standard Packing Procedure',
+                            'alt' => 'Systematic packing process for office and home relocation',
+                        ],
+                        [
+                            'url' => 'assets/images/gallery/parcel.jpg',
+                            'title' => 'Single Unit Parcel',
+                            'alt' => 'Single package securely wrapped for individual parcel delivery',
+                        ],
+                        [
+                            'url' => 'assets/images/gallery/ready-parcels.jpg',
+                            'title' => 'Ready for Dispatch',
+                            'alt' => 'Final packed goods waiting for dispatch to the destination',
+                        ],
+                        [
+                            'url' => 'assets/images/gallery/sofa-packing.jpg',
+                            'title' => 'Furniture Protection',
+                            'alt' => 'Professional sofa packing using stretch film and corrugated wrap',
                         ],
                     ];
                 @endphp
@@ -59,15 +117,15 @@
                 @foreach ($images as $index => $img)
                     <div data-aos="zoom-in" data-aos-delay="{{ $index * 50 }}">
                         <div class="gallery-item group relative overflow-hidden rounded-2xl cursor-zoom-in shadow-md hover:shadow-2xl transition-all duration-500"
-                            data-full="{{ str_replace('w=600', 'w=1200', $img['src']) }}" data-alt="{{ $img['alt'] }}">
-                            <img src="{{ $img['src'] }}" alt="{{ $img['alt'] }}"
+                            data-full="{{ str_replace('w=600', 'w=1200', $img['url']) }}" data-alt="{{ $img['alt'] }}">
+                            <img src="{{ $img['url'] }}" alt="{{ $img['alt'] }}"
                                 class="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-110">
 
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                                 <p
                                     class="text-white text-sm font-medium transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                    {{ $img['alt'] }}
+                                    {{ $img['title'] }}
                                 </p>
                             </div>
                         </div>
@@ -81,11 +139,7 @@
         class="fixed inset-0 z-[100] bg-slate-950/95 backdrop-blur-md hidden items-center justify-center p-4 md:p-10 opacity-0 transition-all duration-500">
         <button id="close-lightbox"
             class="absolute top-6 right-6 z-[110] bg-white/10 hover:bg-white/20 text-white p-3 rounded-full backdrop-blur-xl transition-all border border-white/10">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 6 6 18" />
-                <path d="m6 6 12 12" />
-            </svg>
+            <x-icons.close class="w-6 h-6" />
         </button>
 
         <div class="relative max-w-5xl w-full h-full flex flex-col items-center justify-center">

@@ -38,7 +38,7 @@ return [
     'static' => [
         'mobile' => '7300293594',
         'email' => 'jasolrelocation@gmail.com',
-        'address' => '101, 10th Floor, Shreeji Building, Opposite Shreeji Hospital, Near Shreeji Chowk, Vile Parle East, Mumbai, Maharashtra 400053',
+        'address' => 'S NO-33/4MARUNJI ROAD HINJEWADI PUNE 411057',
         'whatsapp' => '7300293594',
         'facebook' => 'https://www.facebook.com/jasolrelocation',
         'instagram' => 'https://www.instagram.com/jasolrelocation',

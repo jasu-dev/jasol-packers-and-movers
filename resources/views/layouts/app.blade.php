@@ -1,6 +1,6 @@
 @php
     $branches = [
-        'hinjewadi' => 'Hinjewadi',
+        'packers-and-movers-hinjewadi' => 'Hinjewadi',
         'wakad' => 'Wakad',
         'baner' => 'Baner',
         'mahalunge' => 'Mahalunge',
@@ -68,8 +68,8 @@
                         class="absolute left-0 top-full pt-2 hidden group-hover:block min-w-[160px] animate-in fade-in slide-in-from-top-1 z-50">
                         <div class="bg-white border border-border rounded-lg shadow-xl py-2 flex flex-col">
                             @foreach ($branches as $slug => $name)
-                                <a href="/branches/{{ $slug }}"
-                                    class="px-4 py-2 text-sm transition-colors {{ request()->is('branches/' . $slug) ? 'bg-primary/5 text-primary font-semibold' : 'text-foreground/80 hover:bg-slate-50 hover:text-primary' }}">
+                                <a href="{{ $slug }}"
+                                    class="px-4 py-2 text-sm transition-colors {{ request()->is($slug) ? 'bg-primary/5 text-primary font-semibold' : 'text-foreground/80 hover:bg-slate-50 hover:text-primary' }}">
                                     {{ $name }}
                                 </a>
                             @endforeach
@@ -91,19 +91,8 @@
             </div>
 
             <button id="mobile-menu-toggle" class="lg:hidden p-2 text-foreground">
-                <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <line x1="4" x2="20" y1="12" y2="12" />
-                    <line x1="4" x2="20" y1="6" y2="6" />
-                    <line x1="4" x2="20" y1="18" y2="18" />
-                </svg>
-                <svg id="close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <path d="M18 6 6 18" />
-                    <path d="m6 6 12 12" />
-                </svg>
+                <x-icons.menu id="menu-icon" class="w-6 h-6" />
+                <x-icons.close id="close-icon" class="hidden w-6 h-6" />
             </button>
         </div>
 

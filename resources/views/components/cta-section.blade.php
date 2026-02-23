@@ -1,4 +1,4 @@
-<section class="py-10 md:py-20 bg-white px-4 overflow-hidden">
+<section class="py-10 md:py-20 bg-white border-y border-slate-200 px-4 overflow-hidden">
     <div class="container mx-auto">
         <div class="bg-primary rounded-2xl relative overflow-hidden shadow-2xl shadow-primary/30">
             <div class="absolute inset-0 opacity-10 pointer-events-none">

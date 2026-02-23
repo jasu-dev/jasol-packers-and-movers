@@ -133,77 +133,7 @@
     </section>
 
     <!-- How We Work Section -->
-    <section class="section-padding overflow-hidden">
-        <div class="container mx-auto">
-            <div class="text-center mb-12" data-aos="fade-up">
-                <h2 class="section-title">How We Work</h2>
-                <p class="section-subtitle">Our simple 4-step process makes your move hassle-free</p>
-            </div>
-
-            <div class="grid md:grid-cols-4 gap-8">
-
-                <div class="relative text-center p-6" data-aos="fade-up" data-aos-delay="0">
-                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                        <x-icons.date-check class="w-8 h-8 text-primary" />
-                    </div>
-                    <div
-                        class="absolute top-12 left-[calc(50%+40px)] w-[calc(100%-80px)] h-0.5 bg-primary/20 hidden md:block">
-                    </div>
-
-                    <span class="text-xs font-bold text-primary bg-primary/10 px-2.5 py-0.5 rounded-full">
-                        Step 1
-                    </span>
-                    <h3 class="font-semibold text-lg mt-3 mb-2">Book Service</h3>
-                    <p class="text-sm text-muted-foreground">Schedule your move online or call us anytime</p>
-                </div>
-
-                <div class="relative text-center p-6" data-aos="fade-up" data-aos-delay="150">
-                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                        <x-icons.notes class="w-8 h-8 text-primary" />
-                    </div>
-                    <div
-                        class="absolute top-12 left-[calc(50%+40px)] w-[calc(100%-80px)] h-0.5 bg-primary/20 hidden md:block">
-                    </div>
-
-                    <span class="text-xs font-bold text-primary bg-primary/10 px-2.5 py-0.5 rounded-full">
-                        Step 2
-                    </span>
-                    <h3 class="font-semibold text-lg mt-3 mb-2">Survey & Planning</h3>
-                    <p class="text-sm text-muted-foreground">Our team assesses and plans your move in detail
-                    </p>
-                </div>
-
-                <div class="relative text-center p-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                        <x-icons.plan class="w-8 h-8 text-primary" />
-                    </div>
-                    <div
-                        class="absolute top-12 left-[calc(50%+40px)] w-[calc(100%-80px)] h-0.5 bg-primary/20 hidden md:block">
-                    </div>
-
-                    <span class="text-xs font-bold text-primary bg-primary/10 px-2.5 py-0.5 rounded-full">
-                        Step 3
-                    </span>
-                    <h3 class="font-semibold text-lg mt-3 mb-2">Packing & Moving</h3>
-                    <p class="text-sm text-muted-foreground">Expert packing with quality materials and careful
-                        loading</p>
-                </div>
-
-                <div class="relative text-center p-6" data-aos="fade-up" data-aos-delay="450">
-                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                        <x-icons.delivery class="w-8 h-8 text-primary" />
-                    </div>
-                    <span class="text-xs font-bold text-primary bg-primary/10 px-2.5 py-0.5 rounded-full">
-                        Step 4
-                    </span>
-                    <h3 class="font-semibold text-lg mt-3 mb-2">Safe Delivery</h3>
-                    <p class="text-sm text-muted-foreground">Timely delivery with unpacking and setup at
-                        destination</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
+    <x-how-we-work-section />
 
     <!-- why choose us -->
     <section class="section-padding bg-card overflow-hidden">
@@ -306,137 +236,66 @@
                     data-aos="fade-up" data-aos-delay="0">
                     <div
                         class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="text-primary group-hover:text-primary-foreground transition-colors duration-300">
-                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                            <polyline points="9 22 9 12 15 12 15 22" />
-                        </svg>
+                        <x-icons.home class="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300"/>
                     </div>
                     <h3 class="font-semibold text-lg mb-2">House Relocation</h3>
                     <p class="text-sm text-muted-foreground mb-4">Complete household packing, loading,
                         transportation and unpacking services with care.</p>
-                    <a href="#" class="inline-flex items-center text-primary font-semibold hover:underline">
-                        Read More →
-                    </a>
                 </div>
 
                 <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer"
                     data-aos="fade-up" data-aos-delay="100">
                     <div
                         class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="text-primary group-hover:text-primary-foreground transition-colors duration-300">
-                            <rect width="16" height="20" x="4" y="2" rx="2" ry="2" />
-                            <path d="M9 22v-4h6v4" />
-                            <path d="M8 6h.01" />
-                            <path d="M16 6h.01" />
-                            <path d="M8 10h.01" />
-                            <path d="M16 10h.01" />
-                            <path d="M8 14h.01" />
-                            <path d="M16 14h.01" />
-                        </svg>
+                        <x-icons.office class="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300"/>
                     </div>
                     <h3 class="font-semibold text-lg mb-2">Office Relocation</h3>
                     <p class="text-sm text-muted-foreground mb-4">Minimize downtime with our efficient
                         corporate and office relocation solutions.</p>
-                    <a href="#" class="inline-flex items-center text-primary font-semibold hover:underline">
-                        Read More →
-                    </a>
                 </div>
 
                 <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer"
                     data-aos="fade-up" data-aos-delay="200">
                     <div
                         class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="text-primary group-hover:text-primary-foreground transition-colors duration-300">
-                            <path
-                                d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" />
-                            <circle cx="7" cy="17" r="2" />
-                            <path d="M9 17h6" />
-                            <circle cx="17" cy="17" r="2" />
-                        </svg>
+                        <x-icons.car class="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300"/>
                     </div>
                     <h3 class="font-semibold text-lg mb-2">Car Transportation</h3>
                     <p class="text-sm text-muted-foreground mb-4">Safe and insured vehicle transport using
                         enclosed carriers across India.</p>
-                    <a href="#" class="inline-flex items-center text-primary font-semibold hover:underline">
-                        Read More →
-                    </a>
                 </div>
 
                 <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer"
                     data-aos="fade-up" data-aos-delay="300">
                     <div
                         class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="text-primary group-hover:text-primary-foreground transition-colors duration-300">
-                            <path
-                                d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
-                            <path d="m3.3 7 8.7 5 8.7-5" />
-                            <path d="M12 22V12" />
-                        </svg>
+                        <x-icons.load class="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300"/>
                     </div>
                     <h3 class="font-semibold text-lg mb-2">Loading & Unloading</h3>
                     <p class="text-sm text-muted-foreground mb-4">Professional labor services for heavy
                         lifting, loading and unloading at any location.</p>
-                    <a href="#" class="inline-flex items-center text-primary font-semibold hover:underline">
-                        Read More →
-                    </a>
                 </div>
 
                 <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer"
                     data-aos="fade-up" data-aos-delay="400">
                     <div
                         class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="text-primary group-hover:text-primary-foreground transition-colors duration-300">
-                            <circle cx="11" cy="5" r="2" />
-                            <circle cx="18" cy="9" r="2" />
-                            <circle cx="7" cy="10" r="2" />
-                            <circle cx="14" cy="15" r="2" />
-                            <circle cx="18" cy="19" r="3" />
-                            <circle cx="5" cy="19" r="3" />
-                        </svg>
+                        <x-icons.pet class="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300"/>
                     </div>
                     <h3 class="font-semibold text-lg mb-2">Pet Relocation</h3>
                     <p class="text-sm text-muted-foreground mb-4">Stress-free pet transport with proper
                         ventilation, food and veterinary care.</p>
-                    <a href="#" class="inline-flex items-center text-primary font-semibold hover:underline">
-                        Read More →
-                    </a>
                 </div>
 
                 <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer"
                     data-aos="fade-up" data-aos-delay="500">
                     <div
                         class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="text-primary group-hover:text-primary-foreground transition-colors duration-300">
-                            <circle cx="12" cy="12" r="10" />
-                            <path d="M2 12h20" />
-                            <path
-                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                        </svg>
+                        <x-icons.plan class="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300"/>
                     </div>
                     <h3 class="font-semibold text-lg mb-2">International Relocation</h3>
                     <p class="text-sm text-muted-foreground mb-4">Seamless overseas moving with customs
                         clearance and door-to-door delivery.</p>
-                    <a href="#" class="inline-flex items-center text-primary font-semibold hover:underline">
-                        Read More →
-                    </a>
                 </div>
 
             </div>
