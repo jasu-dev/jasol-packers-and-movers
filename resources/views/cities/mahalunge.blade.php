@@ -23,9 +23,9 @@
                         Best <span class="text-primary">Packers and Movers</span> in Mahalunge, Pune
                     </h1>
                     <p class="text-lg text-secondary-foreground/80 mb-8 max-w-lg">
-                        Jasol Packers and Movers in Hinjewadi, Pune offer reliable, safe, and affordable home and office
-                        relocation services with expert packing, secure transportation, timely delivery, and professional
-                        handling for a smooth, hassle-free moving experience.
+                        Jasol Packers and Movers in Mahalunge, Pune offers professional home shifting, office relocation,
+                        vehicle transportation, and local moving services with safe packing, secure transport, affordable
+                        pricing, and timely delivery across Pune and India.
                     </p>
                     <x-ui.primary-button href="#quote">
                         Get Free Quote
@@ -88,30 +88,53 @@
                 <div class="lg:col-span-2">
                     <div data-aos="fade-right">
                         <h2 class="text-2xl md:text-3xl font-heading font-bold text-foreground mb-6">About Jasol Packers and
-                            Movers in Hinjewadi, Pune</h2>
+                            Movers in Mahalunge, Pune</h2>
                         <div class="text-foreground/70 space-y-4 leading-relaxed">
-                            <p class="text-gray-600 leading-relaxed mb-4">
-                                Jasol Packers and Movers in Hinjewadi, Pune is a trusted name in the relocation industry,
-                                offering reliable and professional moving solutions for both residential and commercial
-                                clients. With years of experience and a skilled team of trained staff, we specialize in safe
-                                packing, careful handling, secure loading, and timely transportation of your valuable
-                                belongings.
+                            <p>
+                                Jasol Packers and Movers is a trusted and professional relocation service provider offering
+                                reliable packing and moving services in Mahalunge, Pune for residential and commercial
+                                shifting needs. Mahalunge is a rapidly developing area located in Mulshi Taluka of Pune
+                                district, making it a preferred residential and commercial hub for families and businesses.
                             </p>
-                            <p class="text-gray-600 leading-relaxed mb-4">
-                                Our goal is to make your relocation process smooth, stress-free, and completely hassle-free.
-                                We use high-quality packing materials and modern equipment to ensure that all your household
-                                items, office furniture, electronics, and fragile goods are protected throughout the moving
-                                process.
+                            <p>
+                                Relocation can be stressful without proper planning, but our experienced team ensures a
+                                smooth and hassle-free moving experience by providing complete packing and moving solutions
+                                tailored to your needs.
                             </p>
-                            <p class="text-gray-600 leading-relaxed mb-4">
-                                Whether you are shifting locally within Hinjewadi or planning a long-distance move, our
-                                customized relocation services are designed to meet your specific needs and budget.
+                            <h3 class="text-xl font-heading font-bold text-foreground mb-4">
+                                Complete Home and Office Relocation Services
+                            </h3>
+                            <p>
+                                We provide a wide range of relocation services in Mahalunge Pune including household
+                                shifting, office relocation, local shifting, domestic relocation, vehicle transportation,
+                                furniture shifting, and warehouse storage services.
                             </p>
-                            <p class="text-gray-600 leading-relaxed">
-                                At Jasol Packers and Movers, we focus on customer satisfaction by providing on-time
-                                delivery, transparent pricing, and end-to-end logistics support. From packing and loading to
-                                unloading and unpacking, our dedicated team takes care of every step with professionalism
-                                and attention to detail.
+                            <p>
+                                Whether you are moving within Mahalunge, Baner, Wakad, or relocating to another city, Jasol
+                                Packers and Movers offers end-to-end moving solutions including packing, loading,
+                                transportation, unloading, and unpacking services for safe and secure relocation.
+                            </p>
+                            <h3 class="text-xl font-heading font-bold text-foreground mb-4">
+                                Safe Packing and Secure Transportation
+                            </h3>
+                            <p>
+                                At Jasol Packers and Movers Mahalunge Pune, we use high-quality packing materials such as
+                                bubble wrap, corrugated sheets, foam sheets, packing paper, and waterproof cartons to ensure
+                                maximum protection of your valuable belongings during transit.
+                            </p>
+                            <p>
+                                Our trained professionals follow systematic loading and unloading procedures to minimize the
+                                risk of damage. Our fleet of well-maintained transport vehicles ensures safe and timely
+                                delivery of your household or office goods.
+                            </p>
+                            <h3 class="text-xl font-heading font-bold text-foreground mb-4">
+                                Affordable and Timely Moving Solutions
+                            </h3>
+                            <p>
+                                We understand the importance of time and budget during relocation. Jasol Packers and Movers
+                                provide cost-effective packing and moving services in Mahalunge Pune without compromising on
+                                quality. Our professional approach, transparent pricing, and timely execution help us
+                                deliver stress-free home and office shifting services with complete customer satisfaction.
                             </p>
                         </div>
                     </div>
@@ -160,12 +183,12 @@
             <div class="absolute -bottom-20 -left-20 w-60 h-60 rounded-full bg-primary-foreground"></div>
         </div>
         <div class="container mx-auto px-4 text-center relative z-10">
-            <div  data-aos="fade-up">
+            <div data-aos="fade-up">
                 <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary-foreground mb-4">
-                    Ready to Move in Hinjewadi, Pune?
+                    Ready to Move in Mahalunge, Pune?
                 </h2>
                 <p class="text-primary-foreground/80 mb-8 max-w-xl mx-auto">
-                    Get a free, no-obligation quote from Hinjewadi's
+                    Get a free, no-obligation quote from Mahalunge's
                     most trusted packers and movers. Call now or fill our form!
                 </p>
                 <div class="flex flex-wrap justify-center gap-4">
@@ -187,10 +210,10 @@
     <section id="services" class="section-padding bg-white overflow-hidden">
         <div class="container mx-auto">
             <div class="text-center mb-12" data-aos="fade-up">
-                <h2 class="section-title">Our Packing and Moving Services in Hinjewadi, Pune</h2>
+                <h2 class="section-title">Our Packing and Moving Services in Mahalunge, Pune</h2>
                 <p class="section-subtitle">
-                    Jasol Packers and Movers offer reliable home shifting, office relocation, vehicle transportation and
-                    local moving services in Hinjewadi Pune.
+                    Jasol Packers and Movers provide reliable home shifting, office relocation, vehicle transportation,
+                    loading unloading and local moving services in Mahalunge Pune.
                 </p>
             </div>
 
@@ -203,9 +226,9 @@
                         <x-icons.home
                             class="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                     </div>
-                    <h3 class="font-semibold text-lg mb-2">House Shifting in Hinjewadi</h3>
+                    <h3 class="font-semibold text-lg mb-2">House Shifting in Mahalunge Pune</h3>
                     <p class="text-sm text-muted-foreground mb-4">
-                        Safe and affordable household relocation services in Hinjewadi Pune including packing, loading,
+                        Safe and affordable household shifting services in Mahalunge Pune including packing, loading,
                         transportation, unloading and unpacking with complete care.
                     </p>
                 </div>
@@ -217,9 +240,10 @@
                         <x-icons.office
                             class="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                     </div>
-                    <h3 class="font-semibold text-lg mb-2">Office Relocation in Hinjewadi Pune</h3>
+                    <h3 class="font-semibold text-lg mb-2">Office Relocation in Mahalunge Pune</h3>
                     <p class="text-sm text-muted-foreground mb-4">
-                        Professional office and corporate shifting services in Hinjewadi with minimal downtime for smooth
+                        Professional office and corporate shifting services in Mahalunge Pune with minimal downtime for
+                        smooth
                         and efficient business relocation.
                     </p>
                 </div>
@@ -231,10 +255,10 @@
                         <x-icons.car
                             class="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                     </div>
-                    <h3 class="font-semibold text-lg mb-2">Car Transportation in Hinjewadi</h3>
+                    <h3 class="font-semibold text-lg mb-2">Car Transportation in Mahalunge</h3>
                     <p class="text-sm text-muted-foreground mb-4">
-                        Secure and insured car and bike transportation services from Hinjewadi Pune using modern vehicle
-                        carriers across India.
+                        Secure and insured car and bike transportation services from Mahalunge Pune using modern vehicle
+                        carriers for safe delivery across India.
                     </p>
                 </div>
 
@@ -247,7 +271,7 @@
                     </div>
                     <h3 class="font-semibold text-lg mb-2">Loading and Unloading Services</h3>
                     <p class="text-sm text-muted-foreground mb-4">
-                        Expert loading and unloading services in Hinjewadi Pune for safe handling of heavy furniture,
+                        Expert loading and unloading services in Mahalunge Pune for safe handling of heavy furniture,
                         appliances and fragile items.
                     </p>
                 </div>
@@ -259,10 +283,10 @@
                         <x-icons.home
                             class="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                     </div>
-                    <h3 class="font-semibold text-lg mb-2">Local Shifting Services</h3>
+                    <h3 class="font-semibold text-lg mb-2">Local Shifting Services in Mahalunge</h3>
                     <p class="text-sm text-muted-foreground mb-4">
-                        Fast and reliable local shifting services within Hinjewadi Pune at affordable prices for homes,
-                        flats and offices.
+                        Fast and reliable local shifting services within Mahalunge Pune for homes, flats and offices
+                        at affordable prices.
                     </p>
                 </div>
 
@@ -275,7 +299,7 @@
                     </div>
                     <h3 class="font-semibold text-lg mb-2">Packing and Unpacking Services</h3>
                     <p class="text-sm text-muted-foreground mb-4">
-                        High-quality packing and unpacking services in Hinjewadi Pune using bubble wrap, cartons and
+                        High-quality packing and unpacking services in Mahalunge Pune using bubble wrap, cartons and
                         protective materials for damage-free relocation.
                     </p>
                 </div>
@@ -286,13 +310,13 @@
 
     {{-- Why Choose Us Section --}}
     <section class="section-padding bg-gray-50">
-        <div class="container mx-auto max-w-6xl px-4">
+        <div class="container mx-auto">
 
             <div class="text-center mb-12" data-aos="fade-up">
-                <h2 class="section-title">Why Choose Jasol Packers and Movers in Hinjewadi, Pune?</h2>
+                <h2 class="section-title">Why Choose Jasol Packers and Movers in Mahalunge, Pune?</h2>
                 <p class="section-subtitle">
-                    Looking for reliable packers and movers in Hinjewadi, Pune? Jasol Packers and Movers provide safe,
-                    affordable, and professional home and office relocation services.
+                    We provide safe,affordable, and professional home shifting, office relocation, and vehicle
+                    transportation services in Mahalunge Pune.
                 </p>
             </div>
 
@@ -302,10 +326,10 @@
                     <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                         <x-icons.delivery class="w-5 h-5 text-primary" />
                     </div>
-                    <h3 class="font-semibold text-lg text-gray-800 mb-2">Professional Packing Services</h3>
+                    <h3 class="font-semibold text-lg text-gray-800 mb-2">Professional Packing Services in Mahalunge</h3>
                     <p class="text-sm text-gray-600">
-                        We use high-quality packing materials like bubble wrap, cartons, and foam sheets to protect your
-                        valuable items from damage during relocation.
+                        We use high-quality packing materials like bubble wrap, cartons, foam sheets and stretch film
+                        for safe packing of your household and office goods during relocation.
                     </p>
                 </div>
 
@@ -315,8 +339,8 @@
                     </div>
                     <h3 class="font-semibold text-lg text-gray-800 mb-2">Safe Loading and Unloading</h3>
                     <p class="text-sm text-gray-600">
-                        Our trained team ensures careful handling of furniture, electronics, and fragile goods for safe
-                        loading and unloading at your doorstep.
+                        Our trained staff ensures careful handling of furniture, appliances and fragile items
+                        for safe loading and unloading services in Mahalunge Pune.
                     </p>
                 </div>
 
@@ -324,10 +348,10 @@
                     <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                         <x-icons.award class="w-5 h-5 text-primary" />
                     </div>
-                    <h3 class="font-semibold text-lg text-gray-800 mb-2">Affordable Pricing</h3>
+                    <h3 class="font-semibold text-lg text-gray-800 mb-2">Affordable and Transparent Pricing</h3>
                     <p class="text-sm text-gray-600">
-                        Jasol Packers and Movers offer budget-friendly and transparent pricing without any hidden charges
-                        for local and long-distance shifting.
+                        Jasol Packers and Movers Mahalunge Pune offer cost-effective shifting services with
+                        transparent pricing and no hidden charges.
                     </p>
                 </div>
 
@@ -335,10 +359,10 @@
                     <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                         <x-icons.date-check class="w-5 h-5 text-primary" />
                     </div>
-                    <h3 class="font-semibold text-lg text-gray-800 mb-2">Timely Delivery</h3>
+                    <h3 class="font-semibold text-lg text-gray-800 mb-2">On-Time Pickup and Delivery</h3>
                     <p class="text-sm text-gray-600">
-                        We ensure on-time pickup and delivery services to make your home or office relocation smooth and
-                        hassle-free in Hinjewadi, Pune.
+                        We ensure timely pickup and safe delivery of your goods to make your home or office
+                        shifting experience smooth and hassle-free.
                     </p>
                 </div>
 
@@ -346,10 +370,10 @@
                     <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                         <x-icons.home class="w-5 h-5 text-primary" />
                     </div>
-                    <h3 class="font-semibold text-lg text-gray-800 mb-2">Local and Domestic Shifting</h3>
+                    <h3 class="font-semibold text-lg text-gray-800 mb-2">Local and Domestic Shifting Services</h3>
                     <p class="text-sm text-gray-600">
-                        Whether you are moving locally within Hinjewadi or to another city, we provide reliable relocation
-                        services tailored to your needs.
+                        Whether you are moving locally within Mahalunge Pune or relocating to another city in India,
+                        we provide reliable packing and moving services tailored to your needs.
                     </p>
                 </div>
 
@@ -357,10 +381,10 @@
                     <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                         <x-icons.heart class="w-5 h-5 text-primary" />
                     </div>
-                    <h3 class="font-semibold text-lg text-gray-800 mb-2">Customer Satisfaction</h3>
+                    <h3 class="font-semibold text-lg text-gray-800 mb-2">100% Customer Satisfaction</h3>
                     <p class="text-sm text-gray-600">
-                        Our focus is to provide stress-free moving experiences with expert support from packing to final
-                        delivery.
+                        Our goal is to provide stress-free moving services in Mahalunge Pune with expert support
+                        from packing to final delivery ensuring complete customer satisfaction.
                     </p>
                 </div>
 
@@ -377,7 +401,7 @@
         <div class="container mx-auto max-w-3xl">
             <div class="text-center mb-10" data-aos="fade-up">
                 <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-subtitle">Jasol Packers and Movers Hinjewadi FAQs</p>
+                <p class="section-subtitle">Jasol Packers and Movers Mahalunge Pune FAQs</p>
             </div>
 
             <div class="space-y-3" data-aos="fade-up" data-aos-delay="200">
@@ -385,13 +409,13 @@
                 <div class="faq-item border border-border rounded-xl px-6 bg-card">
                     <button
                         class="faq-trigger w-full py-4 flex items-center justify-between font-medium text-left focus:outline-none">
-                        <span>What services are offered by Jasol Packers and Movers in Hinjewadi, Pune?</span>
+                        <span>Do you provide home shifting services in Mahalunge Pune?</span>
                         <x-icons.down class="faq-icon w-4 h-4 transition-transform duration-300" />
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <p class="pb-4 text-muted-foreground text-sm">
-                            Jasol Packers and Movers provide home shifting, office relocation, packing, loading, unloading,
-                            transportation, unpacking, and storage services in Hinjewadi, Pune at affordable prices.
+                            Yes, Jasol Packers and Movers provide professional household shifting services in Mahalunge Pune
+                            including packing, loading, transportation, unloading and unpacking.
                         </p>
                     </div>
                 </div>
@@ -399,13 +423,13 @@
                 <div class="faq-item border border-border rounded-xl px-6 bg-card">
                     <button
                         class="faq-trigger w-full py-4 flex items-center justify-between font-medium text-left focus:outline-none">
-                        <span>Do Jasol Packers and Movers offer local shifting services in Hinjewadi?</span>
+                        <span>Are your moving services available for local shifting in Mahalunge?</span>
                         <x-icons.down class="faq-icon w-4 h-4 transition-transform duration-300" />
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <p class="pb-4 text-muted-foreground text-sm">
-                            Yes, we offer reliable and safe local household and office shifting services within Hinjewadi
-                            and nearby Pune locations with professional packing and timely delivery.
+                            Yes, we offer fast and reliable local shifting services within Mahalunge Pune for homes,
+                            flats, apartments and offices at affordable rates.
                         </p>
                     </div>
                 </div>
@@ -413,13 +437,13 @@
                 <div class="faq-item border border-border rounded-xl px-6 bg-card">
                     <button
                         class="faq-trigger w-full py-4 flex items-center justify-between font-medium text-left focus:outline-none">
-                        <span>Are packing materials provided by Jasol Packers and Movers Pune?</span>
+                        <span>Do you offer intercity relocation from Mahalunge Pune?</span>
                         <x-icons.down class="faq-icon w-4 h-4 transition-transform duration-300" />
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <p class="pb-4 text-muted-foreground text-sm">
-                            We use high-quality packing materials such as bubble wrap, cartons, foam sheets, and stretch
-                            film to ensure complete protection of your belongings during relocation.
+                            Yes, Jasol Packers and Movers provide domestic relocation services from Mahalunge Pune
+                            to any city across India with safe and secure transportation.
                         </p>
                     </div>
                 </div>
@@ -427,13 +451,13 @@
                 <div class="faq-item border border-border rounded-xl px-6 bg-card">
                     <button
                         class="faq-trigger w-full py-4 flex items-center justify-between font-medium text-left focus:outline-none">
-                        <span>How much do packers and movers charge in Hinjewadi, Pune?</span>
+                        <span>Do you provide vehicle transportation services from Mahalunge?</span>
                         <x-icons.down class="faq-icon w-4 h-4 transition-transform duration-300" />
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <p class="pb-4 text-muted-foreground text-sm">
-                            Charges depend on distance, number of items, packing requirements, and type of relocation. Jasol
-                            Packers and Movers offer transparent and budget-friendly pricing.
+                            We offer secure car and bike transportation services from Mahalunge Pune using modern
+                            vehicle carriers for safe delivery across India.
                         </p>
                     </div>
                 </div>
@@ -441,14 +465,13 @@
                 <div class="faq-item border border-border rounded-xl px-6 bg-card">
                     <button
                         class="faq-trigger w-full py-4 flex items-center justify-between font-medium text-left focus:outline-none">
-                        <span>Why choose Jasol Packers and Movers in Hinjewadi for relocation services?</span>
+                        <span>What makes Jasol Packers and Movers the best in Mahalunge Pune?</span>
                         <x-icons.down class="faq-icon w-4 h-4 transition-transform duration-300" />
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <p class="pb-4 text-muted-foreground text-sm">
-                            We ensure safe handling, on-time delivery, experienced staff, modern equipment, and
-                            customer-focused relocation solutions for stress-free home and office shifting in Hinjewadi,
-                            Pune.
+                            We offer experienced staff, quality packing materials, modern transport vehicles,
+                            timely delivery and affordable relocation services for safe and hassle-free shifting.
                         </p>
                     </div>
                 </div>
