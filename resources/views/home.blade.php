@@ -18,8 +18,7 @@
                         class="inline-block bg-primary/20 text-primary-foreground text-sm font-medium px-4 py-1.5 rounded-full mb-6">
                         #1 Rated Packers & Movers
                     </span>
-                    <h1
-                        class="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-foreground leading-tight mb-6">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-foreground leading-tight mb-6">
                         Safe, Fast & Reliable <span class="text-primary">Packers and Movers</span> Services
                         Across India
                     </h1>
@@ -28,7 +27,7 @@
                     </p>
                     <div class="flex flex-wrap gap-6 text-secondary-foreground/70 text-sm">
                         <span class="flex items-center gap-2">✓ Insured Moving</span>
-                        <span class="flex items-center gap-2">✓ 500+ Cities</span>
+                        <span class="flex items-center gap-2">✓ {{ config('services.static.cities') }}+ Cities</span>
                         <span class="flex items-center gap-2">✓ 24/7 Support</span>
                     </div>
                 </div>
@@ -90,7 +89,7 @@
                     About <span class="text-primary">Jasol Packers &amp; Movers</span>
                 </h2>
                 <p class="section-subtitle">
-                    With over 15 years of experience, we provide safe, reliable and
+                    With over {{ config('services.static.years') }}+ years of experience, we provide safe, reliable and
                     affordable packing and moving services across India. Our professional team ensures your
                     belongings reach their destination without a scratch.
                 </p>
@@ -100,7 +99,8 @@
                 <div data-aos="fade-up" data-aos-delay="100">
                     <div class="text-center p-6 rounded-xl bg-background border border-border card-hover">
                         <x-icons.users class="w-10 h-10 text-primary mx-auto mb-3" />
-                        <div class="text-3xl md:text-4xl font-bold text-primary">5,000+</div>
+                        <div class="text-3xl md:text-4xl font-bold text-primary">{{ config('services.static.clients') }}+
+                        </div>
                         <p class="text-sm text-muted-foreground mt-1">Happy Clients</p>
                     </div>
                 </div>
@@ -108,7 +108,8 @@
                 <div data-aos="fade-up" data-aos-delay="200">
                     <div class="text-center p-6 rounded-xl bg-background border border-border card-hover">
                         <x-icons.truck class="w-10 h-10 text-primary mx-auto mb-3" />
-                        <div class="text-3xl md:text-4xl font-bold text-primary">12,000+</div>
+                        <div class="text-3xl md:text-4xl font-bold text-primary">{{ config('services.static.delivered') }}+
+                        </div>
                         <p class="text-sm text-muted-foreground mt-1">Moves Completed</p>
                     </div>
                 </div>
@@ -116,7 +117,8 @@
                 <div data-aos="fade-up" data-aos-delay="300">
                     <div class="text-center p-6 rounded-xl bg-background border border-border card-hover">
                         <x-icons.location class="w-10 h-10 text-primary mx-auto mb-3" />
-                        <div class="text-3xl md:text-4xl font-bold text-primary">500+</div>
+                        <div class="text-3xl md:text-4xl font-bold text-primary">{{ config('services.static.cities') }}+
+                        </div>
                         <p class="text-sm text-muted-foreground mt-1">Cities Covered</p>
                     </div>
                 </div>
@@ -124,7 +126,8 @@
                 <div data-aos="fade-up" data-aos-delay="400">
                     <div class="text-center p-6 rounded-xl bg-background border border-border card-hover">
                         <x-icons.award class="w-10 h-10 text-primary mx-auto mb-3" />
-                        <div class="text-3xl md:text-4xl font-bold text-primary">15+</div>
+                        <div class="text-3xl md:text-4xl font-bold text-primary">{{ config('services.static.years') }}+
+                        </div>
                         <p class="text-sm text-muted-foreground mt-1">Years Experience</p>
                     </div>
                 </div>
@@ -143,81 +146,79 @@
                 <p class="section-subtitle">We go above and beyond to make your relocation experience smooth
                 </p>
             </div>
-
             <div class="grid md:grid-cols-3 gap-6">
-
-                <div class="flex gap-4 p-6 rounded-xl bg-background border border-border card-hover" data-aos="fade-up"
-                    data-aos-delay="0">
-                    <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <x-icons.users class="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                        <h3 class="font-semibold mb-1">Experienced Staff</h3>
-                        <p class="text-sm text-muted-foreground">Trained professionals handling your valuables
-                            with utmost care</p>
-                    </div>
-                </div>
-
-                <div class="flex gap-4 p-6 rounded-xl bg-background border border-border card-hover" data-aos="fade-up"
-                    data-aos-delay="100">
-                    <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <x-icons.award class="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                        <h3 class="font-semibold mb-1">Affordable Pricing</h3>
-                        <p class="text-sm text-muted-foreground">Competitive rates without compromising on
-                            service quality</p>
+                <div data-aos="fade-up" data-aos-delay="0">
+                    <div class="flex gap-4 p-6 rounded-xl bg-background border border-border card-hover">
+                        <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <x-icons.users class="w-5 h-5 text-primary" />
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-1">Experienced Staff</h3>
+                            <p class="text-sm text-muted-foreground">Trained professionals handling your valuables
+                                with utmost care</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="flex gap-4 p-6 rounded-xl bg-background border border-border card-hover" data-aos="fade-up"
-                    data-aos-delay="200">
-                    <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <x-icons.call class="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                        <h3 class="font-semibold mb-1">24/7 Support</h3>
-                        <p class="text-sm text-muted-foreground">Round the clock customer service for all your
-                            queries</p>
-                    </div>
-                </div>
-
-                <div class="flex gap-4 p-6 rounded-xl bg-background border border-border card-hover" data-aos="fade-up"
-                    data-aos-delay="300">
-                    <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <x-icons.secure class="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                        <h3 class="font-semibold mb-1">Damage Free Moving</h3>
-                        <p class="text-sm text-muted-foreground">Multi-layer packing ensures zero damage during
-                            transit</p>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex gap-4 p-6 rounded-xl bg-background border border-border card-hover">
+                        <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <x-icons.award class="w-5 h-5 text-primary" />
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-1">Affordable Pricing</h3>
+                            <p class="text-sm text-muted-foreground">Competitive rates without compromising on
+                                service quality</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="flex gap-4 p-6 rounded-xl bg-background border border-border card-hover" data-aos="fade-up"
-                    data-aos-delay="400">
-                    <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <x-icons.truck class="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                        <h3 class="font-semibold mb-1">GPS Tracking</h3>
-                        <p class="text-sm text-muted-foreground">Track your shipment in real-time from pickup
-                            to delivery</p>
-                    </div>
-                </div>
-
-                <div class="flex gap-4 p-6 rounded-xl bg-background border border-border card-hover" data-aos="fade-up"
-                    data-aos-delay="500">
-                    <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <x-icons.delivery class="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                        <h3 class="font-semibold mb-1">Timely Delivery</h3>
-                        <p class="text-sm text-muted-foreground">We respect your time and deliver on the
-                            promised date</p>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex gap-4 p-6 rounded-xl bg-background border border-border card-hover">
+                        <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <x-icons.call class="w-5 h-5 text-primary" />
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-1">24/7 Support</h3>
+                            <p class="text-sm text-muted-foreground">Round the clock customer service for all your
+                                queries</p>
+                        </div>
                     </div>
                 </div>
-
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex gap-4 p-6 rounded-xl bg-background border border-border card-hover">
+                        <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <x-icons.secure class="w-5 h-5 text-primary" />
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-1">Damage Free Moving</h3>
+                            <p class="text-sm text-muted-foreground">Multi-layer packing ensures zero damage during
+                                transit</p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex gap-4 p-6 rounded-xl bg-background border border-border card-hover">
+                        <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <x-icons.truck class="w-5 h-5 text-primary" />
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-1">GPS Tracking</h3>
+                            <p class="text-sm text-muted-foreground">Track your shipment in real-time from pickup
+                                to delivery</p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="500">
+                    <div class="flex gap-4 p-6 rounded-xl bg-background border border-border card-hover">
+                        <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <x-icons.delivery class="w-5 h-5 text-primary" />
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-1">Timely Delivery</h3>
+                            <p class="text-sm text-muted-foreground">We respect your time and deliver on the
+                                promised date</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -229,75 +230,79 @@
                 <h2 class="section-title">Our Services</h2>
                 <p class="section-subtitle">Comprehensive relocation solutions tailored to your needs</p>
             </div>
-
             <div class="grid md:grid-cols-3 gap-6">
-
-                <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer"
-                    data-aos="fade-up" data-aos-delay="0">
-                    <div
-                        class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
-                        <x-icons.home class="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300"/>
+                <div data-aos="fade-up" data-aos-delay="0">
+                    <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
+                            <x-icons.home
+                                class="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">House Relocation</h3>
+                        <p class="text-sm text-muted-foreground mb-4">Complete household packing, loading,
+                            transportation and unpacking services with care.</p>
                     </div>
-                    <h3 class="font-semibold text-lg mb-2">House Relocation</h3>
-                    <p class="text-sm text-muted-foreground mb-4">Complete household packing, loading,
-                        transportation and unpacking services with care.</p>
                 </div>
-
-                <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer"
-                    data-aos="fade-up" data-aos-delay="100">
-                    <div
-                        class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
-                        <x-icons.office class="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300"/>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
+                            <x-icons.office
+                                class="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">Office Relocation</h3>
+                        <p class="text-sm text-muted-foreground mb-4">Minimize downtime with our efficient
+                            corporate and office relocation solutions.</p>
                     </div>
-                    <h3 class="font-semibold text-lg mb-2">Office Relocation</h3>
-                    <p class="text-sm text-muted-foreground mb-4">Minimize downtime with our efficient
-                        corporate and office relocation solutions.</p>
                 </div>
-
-                <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer"
-                    data-aos="fade-up" data-aos-delay="200">
-                    <div
-                        class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
-                        <x-icons.car class="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300"/>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
+                            <x-icons.car
+                                class="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">Car Transportation</h3>
+                        <p class="text-sm text-muted-foreground mb-4">Safe and insured vehicle transport using
+                            enclosed carriers across India.</p>
                     </div>
-                    <h3 class="font-semibold text-lg mb-2">Car Transportation</h3>
-                    <p class="text-sm text-muted-foreground mb-4">Safe and insured vehicle transport using
-                        enclosed carriers across India.</p>
                 </div>
-
-                <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer"
-                    data-aos="fade-up" data-aos-delay="300">
-                    <div
-                        class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
-                        <x-icons.load class="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300"/>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
+                            <x-icons.load
+                                class="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">Loading & Unloading</h3>
+                        <p class="text-sm text-muted-foreground mb-4">Professional labor services for heavy
+                            lifting, loading and unloading at any location.</p>
                     </div>
-                    <h3 class="font-semibold text-lg mb-2">Loading & Unloading</h3>
-                    <p class="text-sm text-muted-foreground mb-4">Professional labor services for heavy
-                        lifting, loading and unloading at any location.</p>
                 </div>
-
-                <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer"
-                    data-aos="fade-up" data-aos-delay="400">
-                    <div
-                        class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
-                        <x-icons.pet class="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300"/>
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
+                            <x-icons.pet
+                                class="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">Pet Relocation</h3>
+                        <p class="text-sm text-muted-foreground mb-4">Stress-free pet transport with proper
+                            ventilation, food and veterinary care.</p>
                     </div>
-                    <h3 class="font-semibold text-lg mb-2">Pet Relocation</h3>
-                    <p class="text-sm text-muted-foreground mb-4">Stress-free pet transport with proper
-                        ventilation, food and veterinary care.</p>
                 </div>
-
-                <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer"
-                    data-aos="fade-up" data-aos-delay="500">
-                    <div
-                        class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
-                        <x-icons.plan class="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300"/>
+                <div data-aos="fade-up" data-aos-delay="500">
+                    <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
+                            <x-icons.plan
+                                class="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">International Relocation</h3>
+                        <p class="text-sm text-muted-foreground mb-4">Seamless overseas moving with customs
+                            clearance and door-to-door delivery.</p>
                     </div>
-                    <h3 class="font-semibold text-lg mb-2">International Relocation</h3>
-                    <p class="text-sm text-muted-foreground mb-4">Seamless overseas moving with customs
-                        clearance and door-to-door delivery.</p>
                 </div>
-
             </div>
         </div>
     </section>
@@ -352,8 +357,8 @@
         </div>
     </section>
 
-    <section class="py-24 bg-white overflow-hidden">
-        <div class="container mx-auto px-4">
+    <section class="section-padding bg-white overflow-hidden">
+        <div class="container mx-auto">
 
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                 <div class="max-w-xl">
@@ -380,7 +385,7 @@
 
                     <div class="swiper-slide !h-auto">
                         <div
-                            class="flex flex-col h-full bg-white border border-slate-200 p-8 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:border-slate-300">
+                            class="flex flex-col h-full p-8 bg-card rounded-2xl border border-border card-hover cursor-pointer">
                             <div class="flex gap-1 mb-6 text-orange-400">
                                 @for ($i = 0; $i < 5; $i++)
                                     <x-icons.star class="w-5 h-5 fill-current" />
@@ -407,7 +412,7 @@
 
                     <div class="swiper-slide !h-auto">
                         <div
-                            class="flex flex-col h-full bg-white border border-slate-200 p-8 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:border-slate-300">
+                            class="flex flex-col h-full p-8 bg-card rounded-2xl border border-border card-hover cursor-pointer">
                             <div class="flex gap-1 mb-6 text-orange-400">
                                 @for ($i = 0; $i < 5; $i++)
                                     <x-icons.star class="w-5 h-5 fill-current" />
@@ -434,7 +439,7 @@
 
                     <div class="swiper-slide !h-auto">
                         <div
-                            class="flex flex-col h-full bg-white border border-slate-200 p-8 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:border-slate-300">
+                            class="flex flex-col h-full p-8 bg-card rounded-2xl border border-border card-hover cursor-pointer">
                             <div class="flex gap-1 mb-6 text-orange-400">
                                 @for ($i = 0; $i < 5; $i++)
                                     <x-icons.star class="w-5 h-5 fill-current" />
@@ -461,7 +466,7 @@
 
                     <div class="swiper-slide !h-auto">
                         <div
-                            class="flex flex-col h-full bg-white border border-slate-200 p-8 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:border-slate-300">
+                            class="flex flex-col h-full p-8 bg-card rounded-2xl border border-border card-hover cursor-pointer">
                             <div class="flex gap-1 mb-6 text-orange-400">
                                 @for ($i = 0; $i < 5; $i++)
                                     <x-icons.star class="w-5 h-5 fill-current" />
@@ -596,4 +601,6 @@
             </div>
         </div>
     </section>
+
+    <x-map-section />
 @endsection

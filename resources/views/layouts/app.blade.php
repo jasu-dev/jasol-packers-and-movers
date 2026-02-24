@@ -179,7 +179,7 @@
                     </div>
                     <p class="text-secondary-foreground/60 text-base mb-4">
                         India's trusted packers and movers providing safe, reliable and affordable relocation
-                        services since 2010.
+                        services since 2015.
                     </p>
                     <div class="flex gap-3">
                         <a href="#"

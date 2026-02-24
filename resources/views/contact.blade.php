@@ -115,15 +115,9 @@
         </div>
     </section>
 
-    <section class="py-24 px-4">
-        <div class="rounded-2xl overflow-hidden border border-slate-100 shadow-lg h-100 w-full">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1677654321000!5m2!1sen!2sin"
-                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    </section>
+    <x-map-section />
 
-    <section class="py-24 bg-slate-50 px-4">
+    {{-- <section class="py-24 bg-slate-50 px-4">
         <div class="container mx-auto">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl font-bold text-slate-900">Our Regional Hubs</h2>
@@ -183,7 +177,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!--FAQ Section-->
     <section class="section-padding overflow-hidden">

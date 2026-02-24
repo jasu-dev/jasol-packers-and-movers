@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div class="lg:w-1/2" data-aos="fade-left">
-                    <span class="text-primary font-bold uppercase tracking-widest text-sm">Since 2010</span>
+                    <span class="text-primary font-bold uppercase tracking-widest text-sm">Since 2015</span>
                     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-4 mb-6 leading-tight">From a Single Truck to
                         a Pan-India Logistics Giant</h2>
                     <p class="text-slate-600 mb-6 leading-relaxed">
@@ -47,25 +47,30 @@
     <section class="py-24 bg-slate-50 border-y border-slate-200">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-2 gap-12">
-                <div class="p-10 rounded-2xl bg-white shadow-xl border border-slate-200" data-aos="flip-left">
-                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
-                        <x-icons.target class="w-8 h-8 text-primary group-hover:text-white" />
+                <div data-aos="flip-left">
+                    <div class="p-10 bg-card rounded-2xl border border-border card-hover cursor-pointer">
+                        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                            <x-icons.target class="w-8 h-8 text-primary group-hover:text-white" />
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 group-hover:text-white">Our Mission</h3>
+                        <p class="text-slate-600 group-hover:text-white/80 leading-relaxed text-lg">
+                            To simplify relocations through innovative packing techniques and honest pricing, ensuring every
+                            customer feels "at home" even before they arrive.
+                        </p>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 group-hover:text-white">Our Mission</h3>
-                    <p class="text-slate-600 group-hover:text-white/80 leading-relaxed text-lg">
-                        To simplify relocations through innovative packing techniques and honest pricing, ensuring every
-                        customer feels "at home" even before they arrive.
-                    </p>
                 </div>
-                <div class="p-10 rounded-2xl bg-white shadow-xl border border-slate-200" data-aos="flip-right">
-                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
-                        <x-icons.vision class="w-8 h-8 text-primary group-hover:text-white" />
+                <div data-aos="flip-right">
+                    <div class="p-10 bg-card rounded-2xl border border-border card-hover cursor-pointer">
+                        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                            <x-icons.vision class="w-8 h-8 text-primary group-hover:text-white" />
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 group-hover:text-white">Our Vision</h3>
+                        <p class="text-slate-600 group-hover:text-white/80 leading-relaxed text-lg">
+                            To be the digital-first leader in Indian logistics, setting benchmarks for safety, punctuality,
+                            and
+                            zero-damage delivery across the globe.
+                        </p>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 group-hover:text-white">Our Vision</h3>
-                    <p class="text-slate-600 group-hover:text-white/80 leading-relaxed text-lg">
-                        To be the digital-first leader in Indian logistics, setting benchmarks for safety, punctuality, and
-                        zero-damage delivery across the globe.
-                    </p>
                 </div>
             </div>
         </div>
