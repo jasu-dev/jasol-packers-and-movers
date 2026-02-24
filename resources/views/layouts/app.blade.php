@@ -12,17 +12,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jasol Packers and Movers | Safe, Fast &amp; Reliable Relocation Services Across India</title>
-    <meta name="robots" content="noindex">
-
+    <title>@yield('title', 'Jasol Packers and Movers Hinjewadi, Pune')</title>
+    <!--Design and developed by Tejaldigital.in-->
+    <meta name="robots" content="noindex, nofollow">
+    @stack('metas')
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image" content="{{ asset('assets/images/banner.png') }}">
+    <!--Design and developed by Tejaldigital.in-->
+    <link rel="canonical" href="{{ url()->current() }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
     {{-- Vite resources --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
     @stack('header-scripts')
+    <script type="application/ld+json">
+    @verbatim
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://jasolpackersandmovers.in/#website",
+        "url": "https://jasolpackersandmovers.in/",
+        "name": "Jasol Packers and Movers"
+    }
+    @endverbatim
+    </script>
+    @stack('schema')
 </head>
 
 <body>
@@ -114,8 +130,8 @@
                     </span>
                     <div class="pl-4 flex flex-col gap-1 border-l-2 border-slate-100 ml-3">
                         @foreach ($branches as $slug => $name)
-                            <a href="/branches/{{ $slug }}"
-                                class="px-3 py-2 text-sm rounded-md transition-colors {{ request()->is('branches/' . $slug) ? 'text-primary font-semibold' : 'text-foreground/80 hover:text-primary' }}">
+                            <a href="{{ $slug }}"
+                                class="px-3 py-2 text-sm rounded-md transition-colors {{ request()->is($slug) ? 'text-primary font-semibold' : 'text-foreground/80 hover:text-primary' }}">
                                 {{ $name }}
                             </a>
                         @endforeach

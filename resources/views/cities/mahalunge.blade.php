@@ -1,4 +1,19 @@
 @extends('layouts.app')
+@section('title', 'Expert Packers and Movers in Mahalunge | Household Shifting Pune')
+
+@push('metas')
+    <meta name="title" content="Expert Packers and Movers in Mahalunge | Household Shifting Pune">
+    <meta name="description"
+        content="Jasol Packers and Movers in Mahalunge offers safe packing and moving solutions. We specialize in local shifting and long-distance relocation.">
+    <meta property="og:title" content="Expert Packers and Movers in Mahalunge">
+    <meta property="og:description"
+        content="Safe packing and moving solutions for local and long-distance relocation in Mahalunge.">
+    <meta property="og:type" content="website">
+@endpush
+
+@push('schema')
+    <x-schemas.mahalunge />
+@endpush
 
 @section('content')
     <!-- Hero Section -->
@@ -182,8 +197,7 @@
 
             <div class="grid md:grid-cols-3 gap-6">
 
-                <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer"
-                    data-aos="fade-up">
+                <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer" data-aos="fade-up">
                     <div
                         class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
                         <x-icons.home
@@ -196,8 +210,8 @@
                     </p>
                 </div>
 
-                <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer"
-                    data-aos="fade-up" data-aos-delay="100">
+                <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer" data-aos="fade-up"
+                    data-aos-delay="100">
                     <div
                         class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
                         <x-icons.office
@@ -211,8 +225,8 @@
                     </p>
                 </div>
 
-                <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer"
-                    data-aos="fade-up" data-aos-delay="200">
+                <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer" data-aos="fade-up"
+                    data-aos-delay="200">
                     <div
                         class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
                         <x-icons.car

@@ -1,5 +1,35 @@
 @extends('layouts.app')
 
+@section('title', 'Contact Jasol Packers and Movers | Get Free Quote')
+
+@push('metas')
+    <meta name="title" content="Contact Jasol Packers and Movers | Get Free Quote">
+    <meta name="description"
+        content="Contact Jasol Packers and Movers in Hinjewadi, Pune. Call +91-7300293594 for a free estimate on home shifting, office relocation, and car transport.">
+    <meta property="og:title" content="Contact Jasol Packers and Movers | Get Free Quote">
+    <meta property="og:description"
+        content="Contact Jasol Packers and Movers in Hinjewadi, Pune. Call +91-7300293594 for a free estimate on home shifting, office relocation, and car transport.">
+    <meta property="og:type" content="website">
+@endpush
+
+@push('schema')
+    <x-schemas.hinjewadi />
+    <script type="application/ld+json">
+        @verbatim
+            {
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "mainEntity": {
+                "@id": "https://jasolpackersandmovers.in/#organization"
+            },
+            "name": "Contact Jasol Packers and Movers",
+            "description": "The official contact page for Jasol Packers and Movers. Book your relocation or get a free quote.",
+            "url": "{{ url()->current() }}"
+            }
+        @endverbatim
+    </script>
+@endpush
+
 @section('content')
     <section class="relative bg-secondary py-20 px-4 overflow-hidden">
         <div class="container mx-auto text-center relative z-10">
@@ -91,9 +121,8 @@
                     <p class="text-slate-600 text-sm leading-relaxed mb-6">45, Okhla Industrial Estate, Phase III, New
                         Delhi 110020</p>
                     <a href="tel:+919876543210" class="text-primary font-bold text-sm flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <path
                                 d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                         </svg>
@@ -108,9 +137,8 @@
                     <p class="text-slate-600 text-sm leading-relaxed mb-6">12, Whitefield Main Road, Near Hope Farm,
                         Bangalore 560066</p>
                     <a href="tel:+919876543210" class="text-primary font-bold text-sm flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <path
                                 d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                         </svg>
@@ -125,9 +153,8 @@
                     <p class="text-slate-600 text-sm leading-relaxed mb-6">Sec-10, Near Gandhinagar Crossing, Ahmedabad
                         382010</p>
                     <a href="tel:+919876543210" class="text-primary font-bold text-sm flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <path
                                 d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                         </svg>

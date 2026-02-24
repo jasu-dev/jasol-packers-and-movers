@@ -1,5 +1,22 @@
 @extends('layouts.app')
 
+@section('title', 'About Jasol Packers and Movers | Most Trusted Movers in Pune')
+
+@push('metas')
+    <meta name="title"
+        content="Learn about Jasol Packers and Movers. With years of experience in Hinjewadi and Pune, we provide safe, insured, and professional home and office relocation.">
+    <meta name="description"
+        content="Learn about Jasol Packers and Movers, a trusted name in the moving industry since 2015. Specializing in household and corporate relocation services.">
+    <meta property="og:title" content="About Jasol Packers and Movers | Professional Relocation Team">
+    <meta property="og:description"
+        content="Learn about Jasol Packers and Movers, a trusted name in the moving industry since 2015. Specializing in household and corporate relocation services.">
+    <meta property="og:type" content="profile">
+@endpush
+
+@push('schema')
+    <x-schemas.hinjewadi />
+@endpush
+
 @section('content')
     <section class="relative bg-secondary py-20 px-4 overflow-hidden">
         <div class="container mx-auto text-center relative z-10">

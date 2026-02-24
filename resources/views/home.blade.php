@@ -1,5 +1,21 @@
 @extends('layouts.app')
 
+@section('title', 'Best Packers and Movers in Hinjewadi Pune | Jasol Packers and Movers')
+
+@push('metas')
+    <meta name="title" content="Best Packers and Movers in Hinjewadi Pune | Jasol Packers and Movers">
+    <meta name="description"
+        content="Professional packers and movers in Hinjewadi. We offer reliable home shifting, office relocation, and storage services. Get a free quote today!">
+    <meta property="og:title" content="Best Packers and Movers in Hinjewadi Pune | Jasol Packers and Movers">
+    <meta property="og:description"
+        content="Professional relocation services in Hinjewadi. Safe, fast, and affordable shifting.">
+    <meta property="og:type" content="website">
+@endpush
+
+@push('schema')
+    <x-schemas.hinjewadi />
+@endpush
+
 @section('content')
     <!-- Hero Section -->
     <section id="quote" class="relative min-h-screen flex items-center overflow-hidden">

@@ -1,5 +1,20 @@
 @extends('layouts.app')
 
+@section('title', 'Reliable Packers and Movers in Baner | Jasol Packers and Movers')
+
+@push('metas')
+    <meta name="title" content="Reliable Packers and Movers in Baner | Jasol Packers and Movers">
+    <meta name="description"
+        content="Hire the best packers and movers in Baner for stress-free relocation. Local house shifting, office moving, and bike transport services in Baner, Pune.">
+    <meta property="og:title" content="Reliable Packers and Movers in Baner">
+    <meta property="og:description" content="Stress-free local house shifting and office moving services in Baner, Pune.">
+    <meta property="og:type" content="website">
+@endpush
+
+@push('schema')
+    <x-schemas.baner />
+@endpush
+
 @section('content')
     <!-- Hero Section -->
     <section id="quote" class="relative min-h-screen flex items-center overflow-hidden">
@@ -195,8 +210,7 @@
 
             <div class="grid md:grid-cols-3 gap-6">
 
-                <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer"
-                    data-aos="fade-up">
+                <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer" data-aos="fade-up">
                     <div
                         class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
                         <x-icons.home
@@ -209,8 +223,8 @@
                     </p>
                 </div>
 
-                <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer"
-                    data-aos="fade-up" data-aos-delay="100">
+                <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer" data-aos="fade-up"
+                    data-aos-delay="100">
                     <div
                         class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
                         <x-icons.office
@@ -223,8 +237,8 @@
                     </p>
                 </div>
 
-                <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer"
-                    data-aos="fade-up" data-aos-delay="200">
+                <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer" data-aos="fade-up"
+                    data-aos-delay="200">
                     <div
                         class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
                         <x-icons.car

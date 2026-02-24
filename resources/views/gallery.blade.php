@@ -1,5 +1,38 @@
 @extends('layouts.app')
 
+@section('title', 'Jasol Packers and Movers Gallery | Our Packing & Shifting Photos')
+
+@push('metas')
+    <meta name="title" content="Jasol Packers and Movers Gallery | Our Packing & Shifting Photos">
+    <meta name="description"
+        content="View photos of our professional packing, loading, and transportation services. See Jasol Packers and Movers in action across Hinjewadi, Wakad, and Baner.">
+    <meta property="og:title" content="Jasol Packers and Movers Gallery | Our Packing & Shifting Photos">
+    <meta property="og:description"
+        content="View photos of our professional packing, loading, and transportation services. See Jasol Packers and Movers in action across Hinjewadi, Wakad, and Baner.">
+    <meta property="og:type" content="website">
+@endpush
+
+@push('schema')
+    <x-schemas.hinjewadi />
+    <script type="application/ld+json">
+        @verbatim
+            {
+                "@context": "https://schema.org",
+                "@type": "ImageGallery",
+                "name": "Jasol Packers and Movers Service Gallery",
+                "description": "Photos showing our team performing household shifting, office relocation, and car transportation in Pune.",
+                "url": "https://jasolpackersandmovers.in/gallery",
+                "author": {
+                "@id": "https://jasolpackersandmovers.in/#organization"
+                },
+                "about": {
+                "@id": "https://jasolpackersandmovers.in/#organization"
+                }
+            }
+        @endverbatim
+    </script>
+@endpush
+
 @section('content')
     <section class="relative bg-secondary py-20 px-4 overflow-hidden">
         <div class="container mx-auto text-center relative z-10">

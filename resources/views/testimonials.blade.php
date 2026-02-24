@@ -1,5 +1,52 @@
 @extends('layouts.app')
 
+@section('title', 'Customer Reviews & Testimonials | Jasol Packers and Movers')
+
+@push('metas')
+    <meta name="title" content="Customer Reviews & Testimonials | Jasol Packers and Movers">
+    <meta name="description"
+        content="Read what our happy customers say about Jasol Packers and Movers. Verified reviews for home shifting and office relocation services in Hinjewadi and Pune.">
+    <meta property="og:title" content="Customer Reviews & Testimonials | Jasol Packers and Movers">
+    <meta property="og:description"
+        content="Read what our happy customers say about Jasol Packers and Movers. Verified reviews for home shifting and office relocation services in Hinjewadi and Pune.">
+    <meta property="og:type" content="website">
+@endpush
+
+@push('schema')
+    <x-schemas.hinjewadi />
+    <script type="application/ld+json">
+        @verbatim
+        {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Jasol Packers and Movers Testimonials",
+        "description": "Read verified customer reviews and testimonials for Jasol Packers and Movers in Pune.",
+        "url": "https://jasolpackersandmovers.in/testimonials",
+        "publisher": {
+            "@id": "https://jasolpackersandmovers.in/#organization"
+        },
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://jasolpackersandmovers.in/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Testimonials",
+                "item": "https://jasolpackersandmovers.in/testimonials"
+            }
+            ]
+        }
+        }
+        @endverbatim
+    </script>
+@endpush
+
 @section('content')
     <section class="relative bg-secondary py-20 px-4 overflow-hidden">
         <div class="container mx-auto text-center relative z-10">

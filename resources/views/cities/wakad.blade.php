@@ -1,5 +1,20 @@
 @extends('layouts.app')
 
+@section('title', 'Top Packers and Movers in Wakad Pune | Safe Shifting Services')
+
+@push('metas')
+    <meta name="title" content="Top Packers and Movers in Wakad Pune | Safe Shifting Services">
+    <meta name="description"
+        content="Looking for trusted packers and movers in Wakad? Jasol Packers and Movers provides expert household shifting and vehicle transport at affordable rates.">
+    <meta property="og:title" content="Top Packers and Movers in Wakad Pune">
+    <meta property="og:description" content="Expert household shifting and vehicle transport in Wakad at affordable rates.">
+    <meta property="og:type" content="website">
+@endpush
+
+@push('schema')
+    <x-schemas.wakad />
+@endpush
+
 @section('content')
     <!-- Hero Section -->
     <section id="quote" class="relative min-h-screen flex items-center overflow-hidden">
@@ -194,8 +209,7 @@
 
             <div class="grid md:grid-cols-3 gap-6">
 
-                <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer"
-                    data-aos="fade-up">
+                <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer" data-aos="fade-up">
                     <div
                         class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
                         <x-icons.home
@@ -208,8 +222,8 @@
                     </p>
                 </div>
 
-                <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer"
-                    data-aos="fade-up" data-aos-delay="100">
+                <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer" data-aos="fade-up"
+                    data-aos-delay="100">
                     <div
                         class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
                         <x-icons.office
@@ -223,8 +237,8 @@
                     </p>
                 </div>
 
-                <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer"
-                    data-aos="fade-up" data-aos-delay="200">
+                <div class="group p-6 rounded-xl bg-card border border-border card-hover cursor-pointer" data-aos="fade-up"
+                    data-aos-delay="200">
                     <div
                         class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
                         <x-icons.car

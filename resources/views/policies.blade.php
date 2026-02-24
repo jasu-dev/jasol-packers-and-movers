@@ -1,5 +1,52 @@
 @extends('layouts.app')
 
+@section('title', 'Privacy Policy & Terms of Service | Jasol Packers and Movers')
+
+@push('metas')
+    <meta name="title" content="Privacy Policy & Terms of Service | Jasol Packers and Movers">
+    <meta name="description"
+        content="Read the terms, conditions, and privacy policies of Jasol Packers and Movers. We are committed to transparent service and protecting your data during your relocation.">
+    <meta property="og:title" content="Privacy Policy & Terms of Service | Jasol Packers and Movers">
+    <meta property="og:description"
+        content="Read the terms, conditions, and privacy policies of Jasol Packers and Movers. We are committed to transparent service and protecting your data during your relocation.">
+    <meta property="og:type" content="website">
+@endpush
+
+@push('schema')
+    <x-schemas.hinjewadi />
+    <script type="application/ld+json">
+        @verbatim
+        {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Jasol Packers and Movers Policies",
+        "description": "The official privacy policy and terms of service for Jasol Packers and Movers in Pune.",
+        "url": "{{ url()->current() }}",
+        "publisher": {
+            "@id": "https://jasolpackersandmovers.in/#organization"
+        },
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://jasolpackersandmovers.in/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Policies",
+                "item": "https://jasolpackersandmovers.in/policies"
+            }
+            ]
+        }
+        }
+        @endverbatim
+    </script>
+@endpush
+
 @section('content')
     <section class="relative bg-secondary py-20 px-4 overflow-hidden">
         <div class="container mx-auto text-center relative z-10">
