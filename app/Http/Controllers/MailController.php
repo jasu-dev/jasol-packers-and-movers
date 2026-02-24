@@ -38,6 +38,8 @@ final class MailController extends Controller
 
             Mail::to($adminEmail)->send(new QuoteRequestMail($data));
 
+            Log::channel('quote-request')->info('Quote request sent', $data);
+
             return response()->json([
                 'message' => 'Your quote request has been sent successfully!'
             ], 200);
