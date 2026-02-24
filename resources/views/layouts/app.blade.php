@@ -301,6 +301,61 @@
         });
     </script>
 
+    <script>
+        document.getElementById('quoteForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const responseDiv = document.getElementById('formResponse');
+            const btnText = document.getElementById('btnText');
+            const submitBtn = document.getElementById('submitBtn');
+
+            // Reset UI
+            responseDiv.classList.add('hidden');
+            responseDiv.classList.remove('bg-green-100', 'text-green-700', 'bg-red-100', 'text-red-700');
+            btnText.innerText = "Processing...";
+            submitBtn.disabled = true;
+
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value,
+                        'Accept': 'application/json'
+                    },
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    // Success
+                    responseDiv.innerText = "Thank you! We will call you back within 30 minutes.";
+                    responseDiv.classList.remove('hidden');
+                    responseDiv.classList.add('bg-green-100', 'text-green-700');
+                    form.reset();
+                } else {
+                    // Validation Errors from Laravel
+                    let errorMsg = result.message || "Something went wrong.";
+                    if (result.errors) {
+                        errorMsg = Object.values(result.errors).flat().join('<br>');
+                    }
+                    throw new Error(errorMsg);
+                }
+            } catch (error) {
+                // Error display
+                responseDiv.innerHTML = error.message;
+                responseDiv.classList.remove('hidden');
+                responseDiv.classList.add('bg-red-100', 'text-red-700');
+            } finally {
+                btnText.innerText = "Get Free Quote →";
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+
     @stack('footer-scripts')
 </body>
 

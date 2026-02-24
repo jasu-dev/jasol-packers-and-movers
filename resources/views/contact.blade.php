@@ -17,8 +17,8 @@
     </section>
 
     <section class="py-24 px-4 bg-white relative overflow-hidden">
-        <div class="container mx-auto">
-            <div class="grid lg:grid-cols-12 gap-16 max-w-7xl mx-auto">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid lg:grid-cols-12 gap-16">
 
                 <div class="lg:col-span-5 space-y-10" data-aos="fade-right">
                     <div>
@@ -66,50 +66,9 @@
                 </div>
 
                 <div class="lg:col-span-7" data-aos="fade-left">
-                    <form action="#" method="POST"
-                        class="bg-card border border-slate-200 rounded-2xl p-6 md:p-8 space-y-4">
-                        @csrf
-                        <h2 class="text-3xl font-bold text-card-foreground mb-2">
-                            Get a Free <span class="text-primary">Quote</span>
-                        </h2>
-                        <p class="text-sm text-muted-foreground mb-4">Fill the form below and get a callback
-                            within 30 minutes</p>
-
-                        <x-form.input name="name" placeholder="Your Name" required />
-
-                        <x-form.input type="tel" name="phone" placeholder="Phone Number" required />
-
-                        <div class="grid grid-cols-2 gap-3">
-                            <x-form.input type="text" name="from_city" placeholder="From City" required />
-                            <x-form.input type="text" name="to_city" placeholder="To City" required />
-                        </div>
-
-                        <x-form.input type="date" name="moving_date" required />
-
-                        <div class="relative">
-                            <select name="service" required
-                                class="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm focus:ring-2 focus:ring-ring appearance-none cursor-pointer">
-                                <option value="" disabled selected>Service Required</option>
-                                <option value="House Relocation">House Relocation</option>
-                                <option value="Office Relocation">Office Relocation</option>
-                                <option value="Car Transportation">Car Transportation</option>
-                                <option value="Loading & Unloading">Loading & Unloading</option>
-                                <option value="Pet Relocation">Pet Relocation</option>
-                                <option value="International Relocation">International Relocation</option>
-                            </select>
-                            <div
-                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-muted-foreground">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="m6 9 6 6 6-6" />
-                                </svg>
-                            </div>
-                        </div>
-                        <x-ui.primary-button type="submit" class="w-full">
-                            Get Free Quote →
-                        </x-ui.primary-button>
-                    </form>
+                    <div class="bg-card border border-slate-200 rounded-2xl p-6 md:p-8">
+                        <x-quote-form />
+                    </div>
                 </div>
             </div>
         </div>

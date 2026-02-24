@@ -26,7 +26,7 @@
                     </p>
 
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="#quote">
+                        <a href="{{ route('contact') }}">
                             <x-ui.secondary-button>Get Free Quote Now</x-ui.secondary-button>
                         </a>
                         <a href="tel:+919876543210">

@@ -34,49 +34,9 @@
                 </div>
 
                 <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
-                    <form action="#" method="POST" class="bg-card rounded-2xl shadow-2xl p-6 md:p-8 space-y-4">
-                        @csrf
-                        <h2 class="text-3xl font-bold text-card-foreground mb-2">
-                            Get a Free <span class="text-primary">Quote</span>
-                        </h2>
-                        <p class="text-sm text-muted-foreground mb-4">Fill the form below and get a callback
-                            within 30 minutes</p>
-
-                        <x-form.input name="name" placeholder="Your Name" required />
-
-                        <x-form.input type="tel" name="phone" placeholder="Phone Number" required />
-
-                        <div class="grid grid-cols-2 gap-3">
-                            <x-form.input type="text" name="from_city" placeholder="From City" required />
-                            <x-form.input type="text" name="to_city" placeholder="To City" required />
-                        </div>
-
-                        <x-form.input type="date" name="moving_date" required />
-
-                        <div class="relative">
-                            <select name="service" required
-                                class="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm focus:ring-2 focus:ring-ring appearance-none cursor-pointer">
-                                <option value="" disabled selected>Service Required</option>
-                                <option value="House Relocation">House Relocation</option>
-                                <option value="Office Relocation">Office Relocation</option>
-                                <option value="Car Transportation">Car Transportation</option>
-                                <option value="Loading & Unloading">Loading & Unloading</option>
-                                <option value="Pet Relocation">Pet Relocation</option>
-                                <option value="International Relocation">International Relocation</option>
-                            </select>
-                            <div
-                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-muted-foreground">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="m6 9 6 6 6-6" />
-                                </svg>
-                            </div>
-                        </div>
-                        <x-ui.primary-button type="submit" class="w-full">
-                            Get Free Quote →
-                        </x-ui.primary-button>
-                    </form>
+                    <div class="bg-card rounded-2xl shadow-2xl p-6 md:p-8">
+                        <x-quote-form />
+                    </div>
                 </div>
             </div>
         </div>
@@ -147,7 +107,8 @@
                         <div class="text-2xl md:text-4xl font-bold text-primary">
                             {{ config('services.static.cities') }}+
                         </div>
-                        <p class="text-xs md:text-sm font-medium text-muted-foreground mt-1 uppercase tracking-wider">Cities
+                        <p class="text-xs md:text-sm font-medium text-muted-foreground mt-1 uppercase tracking-wider">
+                            Cities
                             Covered</p>
                     </div>
 
@@ -167,6 +128,33 @@
 
     <!-- How We Work Section -->
     <x-how-we-work-section />
+
+    {{-- Landing page cta --}}
+    <section class="py-20 bg-secondary relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-primary-foreground"></div>
+            <div class="absolute -bottom-20 -left-20 w-60 h-60 rounded-full bg-primary-foreground"></div>
+        </div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <div data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary-foreground mb-4">
+                    Ready to Move in Hinjewadi, Pune?
+                </h2>
+                <p class="text-primary-foreground/80 mb-8 max-w-xl mx-auto">
+                    Get a free, no-obligation quote from Hinjewadi's
+                    most trusted packers and movers. Call now or fill our form!
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="tel:+91{{ config('services.static.mobile') }}">
+                        <x-ui.primary-button>
+                            <x-icons.call class="w-5 h-5" />
+                            +91-{{ config('services.static.mobile') }}
+                        </x-ui.primary-button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     {{-- Why Choose Jasol Packers & Movers Section --}}
     <section class="section-padding bg-card overflow-hidden">
@@ -289,7 +277,8 @@
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="section-title">Premium <span class="text-primary">Relocation Services</span></h2>
                 <p class="section-subtitle max-w-3xl mx-auto">
-                    As the leading **packers and movers in Hinjewadi, Pune**, we offer specialized moving solutions tailored
+                    As the leading <b>packers and movers in Hinjewadi, Pune</b>, we offer specialized moving solutions
+                    tailored
                     to the unique needs of the IT community and residential hubs.
                 </p>
             </div>
@@ -479,17 +468,26 @@
                         <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6">
                             <x-icons.secure class="w-7 h-7 text-primary" />
                         </div>
-                        <h3 class="text-xl font-bold mb-4">Prioritize Transit Insurance</h3>
-                        <p class="text-muted-foreground text-sm leading-relaxed">
-                            Even with the **best household shifting services in Hinjewadi**, road conditions during Pune
-                            monsoons can be unpredictable. Ensure your chosen mover offers comprehensive **goods-in-transit
-                            insurance**. This covers your valuables against accidental damage, fire, or theft during the
-                            journey. Many cheap movers skip this, but a professional service will provide an insurance
-                            certificate with a clear declared value. For expensive furniture and electronics common in
-                            **Hinjewadi IT professional homes**, this 3% extra cost provides 100% peace of mind. Always ask
-                            for the "all-risk" insurance package to ensure your high-end appliances are fully protected
-                            during the move.
-                        </p>
+                        <h3 class="text-2xl font-bold mb-4">Prioritize Transit Insurance</h3>
+                        <div class="text-base text-muted-foreground leading-relaxed space-y-4">
+                            <p>
+                                Even with the <b>best household shifting services in Hinjewadi</b>, road conditions during
+                                Pune
+                                monsoons can be unpredictable. Ensure your chosen mover offers comprehensive
+                                <b>goods-in-transit insurance</b>. This covers your valuables against accidental damage,
+                                fire, or theft during the journey.
+                            </p>
+                            <p>
+                                Many cheap movers skip this, but a professional service will provide an insurance
+                                certificate with a clear declared value. For expensive furniture and electronics common in
+                                <b>Hinjewadi IT professional homes</b>, this 3% extra cost provides 100% peace of mind.
+                            </p>
+                            <p>
+                                Always ask for the "all-risk" insurance package to ensure your high-end appliances are fully
+                                protected
+                                during the move.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
@@ -498,17 +496,25 @@
                         <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6">
                             <x-icons.heart class="w-7 h-7 text-primary" />
                         </div>
-                        <h3 class="text-xl font-bold mb-4">Read Hinjewadi-Specific Reviews</h3>
-                        <p class="text-muted-foreground text-sm leading-relaxed">
-                            Don’t just look at the overall star rating. Filter reviews for mentions of **"Hinjewadi
-                            shifting"** or **"Pune local move"**. This helps you understand if the crew is familiar with
-                            local restrictions in societies like Blue Ridge, Megapolis, or Life Republic. Expert **movers
-                            and packers in Hinjewadi Pune** know the entry timings for heavy vehicles and the specific
-                            elevator policies of these major townships. Reading recent customer feedback on Google Business
-                            Profile or Trustpilot about their punctuality in Pune’s traffic will give you a realistic
-                            expectation of their service quality. Consistent positive reviews for "damage-free delivery" are
-                            the best indicator of a reliable partner.
-                        </p>
+                        <h3 class="text-2xl font-bold mb-4">Read Hinjewadi-Specific Reviews</h3>
+                        <div class="text-base text-muted-foreground leading-relaxed space-y-4">
+                            <p>
+                                Don’t just look at the overall star rating. Filter reviews for mentions of <b>"Hinjewadi
+                                    shifting"</b> or <b>"Pune local move"</b>. This helps you understand if the crew is
+                                familiar with
+                                local restrictions in societies like Blue Ridge, Megapolis, or Life Republic.
+                            </p>
+                            <p>
+                                Expert <b>movers and packers in Hinjewadi Pune</b> know the entry timings for heavy vehicles
+                                and the specific elevator policies of these major townships.
+                            </p>
+                            <p>
+                                Reading recent customer feedback on Google Business Profile or Trustpilot about their
+                                punctuality in Pune’s traffic will give you a realistic expectation of their service
+                                quality. Consistent positive reviews for "damage-free delivery" are the best indicator of a
+                                reliable partner.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -750,7 +756,8 @@
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <p class="pb-5 text-muted-foreground leading-relaxed">
                             At Jasol Packers, our minimum charge for small-scale shifting or few-item relocation in
-                            <b>Hinjewadi</b> starts as low as ₹2,000. This includes basic loading, transport, and unloading by
+                            <b>Hinjewadi</b> starts as low as ₹2,000. This includes basic loading, transport, and unloading
+                            by
                             our professional team.
                         </p>
                     </div>
@@ -770,7 +777,7 @@
                         <p class="pb-5 text-muted-foreground leading-relaxed">
                             Some companies have shifted operations due to infrastructure and traffic concerns, but Hinjewadi
                             remains a massive IT hub. This movement has actually increased the demand for <b>commercial
-                            office relocation</b> and employee home shifting services in the Pune West region.
+                                office relocation</b> and employee home shifting services in the Pune West region.
                         </p>
                     </div>
                 </div>
@@ -807,7 +814,8 @@
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <p class="pb-5 text-muted-foreground leading-relaxed">
-                            Most local shifts within <b>Hinjewadi, Pune</b> are completed within 4 to 8 hours. Our team ensures
+                            Most local shifts within <b>Hinjewadi, Pune</b> are completed within 4 to 8 hours. Our team
+                            ensures
                             that your furniture is dismantled, packed, moved, and reassembled on the same day to minimize
                             disruption to your IT work schedule.
                         </p>
@@ -826,7 +834,8 @@
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <p class="pb-5 text-muted-relaxed">
-                            Yes, weekends are our busiest times. We recommend booking your <b>Hinjewadi shifting service</b> at
+                            Yes, weekends are our busiest times. We recommend booking your <b>Hinjewadi shifting service</b>
+                            at
                             least 3-4 days in advance for Saturday or Sunday moves to ensure slot availability.
                         </p>
                     </div>

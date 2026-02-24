@@ -27,55 +27,18 @@
                         office relocation services with safe packing, timely delivery, secure transportation, and
                         hassle-free shifting solutions across Pune and India.
                     </p>
-                    <x-ui.primary-button href="#quote">
-                        Get Free Quote
-                    </x-ui.primary-button>
+                    <a href="tel:+91{{ config('services.static.mobile') }}">
+                        <x-ui.primary-button>
+                            <x-icons.call class="w-5 h-5" />
+                            Call Now
+                        </x-ui.primary-button>
+                    </a>
                 </div>
 
                 <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
-                    <form action="#" method="POST" class="bg-card rounded-2xl shadow-2xl p-6 md:p-8 space-y-4">
-                        @csrf
-                        <h2 class="text-3xl font-bold text-card-foreground mb-2">
-                            Get a Free <span class="text-primary">Quote</span>
-                        </h2>
-                        <p class="text-sm text-muted-foreground mb-4">Fill the form below and get a callback
-                            within 30 minutes</p>
-
-                        <x-form.input name="name" placeholder="Your Name" required />
-
-                        <x-form.input type="tel" name="phone" placeholder="Phone Number" required />
-
-                        <div class="grid grid-cols-2 gap-3">
-                            <x-form.input type="text" name="from_city" placeholder="From City" required />
-                            <x-form.input type="text" name="to_city" placeholder="To City" required />
-                        </div>
-
-                        <x-form.input type="date" name="moving_date" required />
-
-                        <div class="relative">
-                            <select name="service" required
-                                class="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm focus:ring-2 focus:ring-ring appearance-none cursor-pointer">
-                                <option value="" disabled selected>Service Required</option>
-                                <option value="House Relocation">House Relocation</option>
-                                <option value="Office Relocation">Office Relocation</option>
-                                <option value="Car Transportation">Car Transportation</option>
-                                <option value="Loading & Unloading">Loading & Unloading</option>
-                                <option value="Pet Relocation">Pet Relocation</option>
-                                <option value="International Relocation">International Relocation</option>
-                            </select>
-                            <div
-                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-muted-foreground">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="m6 9 6 6 6-6" />
-                                </svg>
-                            </div>
-                        </div>
-                        <x-ui.primary-button type="submit" class="w-full">
-                            Get Free Quote →
-                        </x-ui.primary-button>
-                    </form>
+                    <div class="bg-card rounded-2xl shadow-2xl p-6 md:p-8">
+                        <x-quote-form />
+                    </div>
                 </div>
             </div>
         </div>
@@ -174,7 +137,7 @@
                                         <p class="text-xs text-muted-foreground">Available 24/7</p>
                                     </div>
                                 </a>
-                                <a href="#get-free-quote">
+                                <a href="{{ route('contact') }}">
                                     <x-ui.primary-button class="w-full">
                                         <span>Get Free Quote</span>
                                     </x-ui.primary-button>

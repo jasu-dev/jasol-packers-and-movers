@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home')->name('home');
@@ -18,3 +19,5 @@ Route::view('/policies', 'policies')->name('policies');
 Route::view('/packers-and-movers-wakad', 'cities.wakad')->name('wakad');
 Route::view('/packers-and-movers-baner', 'cities.baner')->name('baner');
 Route::view('/packers-and-movers-mahalunge', 'cities.mahalunge')->name('mahalunge');
+
+Route::post('/quote', [MailController::class, 'store'])->name('quote.store');
