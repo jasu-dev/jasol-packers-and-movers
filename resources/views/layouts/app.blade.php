@@ -1,6 +1,5 @@
 @php
     $branches = [
-        'packers-and-movers-hinjewadi' => 'Hinjewadi',
         'packers-and-movers-wakad' => 'Wakad',
         'packers-and-movers-baner' => 'Baner',
         'packers-and-movers-mahalunge' => 'Mahalunge',
