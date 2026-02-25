@@ -29,7 +29,7 @@
                         <a href="{{ route('contact') }}">
                             <x-ui.secondary-button>Get Free Quote Now</x-ui.secondary-button>
                         </a>
-                        <a href="tel:+919876543210">
+                        <a href="tel:+91{{ config('services.static.mobile') }}">
                             <x-ui.primary-button class="border-white">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
