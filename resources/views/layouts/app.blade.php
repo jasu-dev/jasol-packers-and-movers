@@ -18,6 +18,7 @@
     @stack('metas')
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:image" content="{{ asset('assets/images/banner.png') }}">
+    <meta name="google-site-verification" content="yF9T_fngjBbkTcELQnfGkvSiOrIR8OM9PqjgJmhfwQ0" />
     <link rel="canonical" href="{{ url()->current() }}">
     <!--Design and developed by Tejaldigital.in-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
