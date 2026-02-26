@@ -14,12 +14,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Jasol Packers and Movers Hinjewadi, Pune')</title>
     <!--Design and developed by Tejaldigital.in-->
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="index, follow">
     @stack('metas')
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:image" content="{{ asset('assets/images/banner.png') }}">
-    <!--Design and developed by Tejaldigital.in-->
     <link rel="canonical" href="{{ url()->current() }}">
+    <!--Design and developed by Tejaldigital.in-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
@@ -30,11 +30,42 @@
     <script type="application/ld+json">
     @verbatim
     {
-        "@context": "https://schema.org",
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+        "@type": "MovingCompany",
+        "@id": "https://jasolpackersandmovers.in/#organization",
+        "name": "Jasol Packers and Movers",
+        "url": "https://jasolpackersandmovers.in/",
+        "logo": "https://jasolpackersandmovers.in/assets/images/logo.svg",
+        "telephone": "+91-7300293594",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "S NO-33/4 Laxmi chowk, Hinjawadi Phase 2 Rd, Phase 1",
+            "addressLocality": "Hinjewadi",
+            "addressRegion": "Maharashtra",
+            "postalCode": "411057",
+            "addressCountry": "IN"
+        },
+        "sameAs": [
+            "https://www.facebook.com/JasolPackersandmovers",
+            "https://www.instagram.com/jasol_packers_and_movers"
+        ],
+        "areaServed": [
+            { "@type": "City", "name": "Hinjewadi" },
+            { "@type": "City", "name": "Wakad" },
+            { "@type": "City", "name": "Baner" },
+            { "@type": "City", "name": "Mahalunge" }
+        ]
+        },
+        {
         "@type": "WebSite",
         "@id": "https://jasolpackersandmovers.in/#website",
         "url": "https://jasolpackersandmovers.in/",
-        "name": "Jasol Packers and Movers"
+        "name": "Jasol Packers and Movers",
+        "publisher": { "@id": "https://jasolpackersandmovers.in/#organization" }
+        }
+    ]
     }
     @endverbatim
     </script>
@@ -197,45 +228,17 @@
                         services since 2015.
                     </p>
                     <div class="flex gap-3">
-                        <a href="#"
+                        <a href="https://www.facebook.com/JasolPackersandmovers"
                             class="w-9 h-9 rounded-full bg-secondary-foreground/10 flex items-center justify-center hover:bg-primary transition-colors group">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="group-hover:text-primary-foreground transition-colors">
-                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                            </svg>
+                            <x-icons.facebook class="w-4 h-4 group-hover:text-primary-foreground transition-colors" />
                         </a>
-                        <a href="#"
+                        <a href="https://www.instagram.com/jasol_packers_and_movers"
                             class="w-9 h-9 rounded-full bg-secondary-foreground/10 flex items-center justify-center hover:bg-primary transition-colors group">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="group-hover:text-primary-foreground transition-colors">
-                                <path
-                                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-                            </svg>
+                            <x-icons.instagram class="w-4 h-4 group-hover:text-primary-foreground transition-colors" />
                         </a>
-                        <a href="#"
+                        <a href="https://wa.me/91{{ config('services.static.mobile') }}"
                             class="w-9 h-9 rounded-full bg-secondary-foreground/10 flex items-center justify-center hover:bg-primary transition-colors group">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round"
-                                class="group-hover:text-primary-foreground transition-colors">
-                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                            </svg>
-                        </a>
-                        <a href="#"
-                            class="w-9 h-9 rounded-full bg-secondary-foreground/10 flex items-center justify-center hover:bg-primary transition-colors group">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round"
-                                class="group-hover:text-primary-foreground transition-colors">
-                                <path
-                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                                <rect width="4" height="12" x="2" y="9" />
-                                <circle cx="4" cy="4" r="2" />
-                            </svg>
+                            <x-icons.whatsapp class="w-4 h-4 group-hover:text-primary-foreground transition-colors" />
                         </a>
                     </div>
                 </div>
@@ -243,18 +246,26 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4 text-secondary-foreground">Quick Links</h3>
                     <ul class="space-y-2 text-base text-secondary-foreground/60">
-                        <li><a href="{{ route('home') }}" class="hover:text-primary transition-colors">Home</a></li>
-                        <li><a href="{{ route('about') }}" class="hover:text-primary transition-colors">About</a>
+                        <li>
+                            <a href="{{ route('home') }}" class="hover:text-primary transition-colors">Home</a>
                         </li>
-                        <li><a href="{{ route('gallery') }}" class="hover:text-primary transition-colors">Gallery</a>
+                        <li>
+                            <a href="{{ route('about') }}" class="hover:text-primary transition-colors">About</a>
                         </li>
-                        <li><a href="{{ route('testimonials') }}"
+                        <li>
+                            <a href="{{ route('gallery') }}" class="hover:text-primary transition-colors">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('testimonials') }}"
                                 class="hover:text-primary transition-colors">Testimonials</a>
                         </li>
-                        <li><a href="{{ route('contact') }}" class="hover:text-primary transition-colors">Contact</a>
+                        <li>
+                            <a href="{{ route('contact') }}" class="hover:text-primary transition-colors">Contact</a>
                         </li>
-                        <li><a href="{{ route('policies') }}"
-                                class="hover:text-primary transition-colors">Policies</a></li>
+                        <li>
+                            <a href="{{ route('policies') }}"
+                                class="hover:text-primary transition-colors">Policies</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -262,8 +273,10 @@
                     <h3 class="text-lg font-semibold mb-4 text-secondary-foreground">Our Branches</h3>
                     <ul class="space-y-2 text-base text-secondary-foreground/60">
                         @foreach ($branches as $slug => $name)
-                            <li><a href="{{ $slug }}"
-                                    class="hover:text-primary transition-colors">{{ $name }}</a></li>
+                            <li>
+                                <a href="{{ $slug }}"
+                                    class="hover:text-primary transition-colors">{{ $name }}</a>
+                            </li>
                         @endforeach
                     </ul>
                 </div>

@@ -10,11 +10,30 @@
     <meta property="og:description" content="Stress-free local house shifting and office moving services in Baner, Pune.">
     <meta property="og:type" content="website">
 @endpush
-
 @push('schema')
-    <x-schemas.baner />
+    <script type="application/ld+json">
+    @verbatim
+    {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jasolpackersandmovers.in/"
+        },
+        {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Packers and Movers in Baner",
+        "item": "https://jasolpackersandmovers.in/packers-and-movers-baner"
+        }
+    ]
+    }
+    @endverbatim
+    </script>
 @endpush
-
 @section('content')
     <!-- Hero Section -->
     <section id="quote" class="relative min-h-screen flex items-center overflow-hidden">

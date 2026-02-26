@@ -13,7 +13,6 @@
 @endpush
 
 @push('schema')
-    <x-schemas.hinjewadi />
     <script type="application/ld+json">
         @verbatim
         {

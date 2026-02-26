@@ -14,7 +14,28 @@
 @endpush
 
 @push('schema')
-    <x-schemas.hinjewadi />
+    <script type="application/ld+json">
+    @verbatim
+    {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jasolpackersandmovers.in/"
+        },
+        {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About Us",
+        "item": "https://jasolpackersandmovers.in/about"
+        }
+    ]
+    }
+    @endverbatim
+    </script>
 @endpush
 
 @section('content')

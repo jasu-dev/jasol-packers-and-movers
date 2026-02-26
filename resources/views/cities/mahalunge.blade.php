@@ -10,11 +10,30 @@
         content="Safe packing and moving solutions for local and long-distance relocation in Mahalunge.">
     <meta property="og:type" content="website">
 @endpush
-
 @push('schema')
-    <x-schemas.mahalunge />
+    <script type="application/ld+json">
+    @verbatim
+    {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jasolpackersandmovers.in/"
+        },
+        {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Packers and Movers in Mahalunge",
+        "item": "https://jasolpackersandmovers.in/packers-and-movers-mahalunge"
+        }
+    ]
+    }
+    @endverbatim
+    </script>
 @endpush
-
 @section('content')
     <!-- Hero Section -->
     <section id="quote" class="relative min-h-screen flex items-center overflow-hidden">
