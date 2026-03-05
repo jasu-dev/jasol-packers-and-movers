@@ -38,7 +38,7 @@ return [
     'static' => [
         'mobile' => '7300293594',
         'email' => 'jasolrelocation@gmail.com',
-        'address' => 'S NO-33/4  Laxmi chowk, Hinjawadi Phase 2 Rd, Phase 1, Hinjawadi Rajiv Gandhi Infotech Park, Hinjawadi, Pune, Pimpri-Chinchwad, Maharashtra 411057',
+        'address' => 'Shop Number 06 Survey Number 261/3/2  Sakhare Dhawale Wasti Near flour mill Laxmi chowk, Hinjawadi Phase 2 Road,  Hinjewadi Phase 1, Pune, Pimpri-Chinchwad, Maharashtra 411057',
         'whatsapp' => '7300293594',
         'facebook' => 'https://www.facebook.com/jasolrelocation',
         'instagram' => 'https://www.instagram.com/jasolrelocation',

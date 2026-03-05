@@ -42,9 +42,9 @@
         "telephone": "+91-7300293594",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "S NO-33/4 Laxmi chowk, Hinjawadi Phase 2 Rd, Phase 1",
-            "addressLocality": "Hinjewadi",
-            "addressRegion": "Maharashtra",
+            "streetAddress": "Shop Number 06, Survey Number 261/3/2,  Sakhare Dhawale Wasti Near flour mill Laxmi chowk, Hinjawadi Phase 2 Road",
+            "addressLocality": "Hinjewadi Phase 1",
+            "addressRegion": "Pune, Pimpri-Chinchwad, Maharashtra",
             "postalCode": "411057",
             "addressCountry": "IN"
         },
@@ -311,6 +311,27 @@
             </p>
         </div>
     </footer>
+    <div class="fixed bottom-10 right-10 flex flex-col items-center z-50">
+
+        <div
+            class="relative mb-3 bg-white text-gray-800 text-xs sm:text-sm font-bold py-2 px-4 rounded-lg shadow-xl border border-gray-100 animate-bounce">
+            Call now
+            <div
+                class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-white rotate-45 border-r border-b border-gray-100">
+            </div>
+        </div>
+
+        <a href="https://wa.me/91{{ config('services.static.mobile') }}?text=Hello!" target="_blank"
+            class="relative flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-2xl hover:scale-110 transition-transform duration-300">
+
+            <span class="absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-75 animate-ping"></span>
+
+            <svg class="relative w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.888-9.886 9.888m8.415-18.3A11.334 11.334 0 0012.02 0C5.399 0 .007 5.392.004 12.013a11.276 11.276 0 001.533 5.727L0 24l6.435-1.687a11.302 11.302 0 005.58 1.459h.006c6.621 0 12.015-5.392 12.018-12.014a11.281 11.281 0 00-3.359-8.498z" />
+            </svg>
+        </a>
+    </div>
     <script>
         const toggleBtn = document.getElementById('mobile-menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
