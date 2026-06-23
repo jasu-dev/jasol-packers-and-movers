@@ -75,6 +75,32 @@
 
 <body>
     <header id="main-navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white">
+        <!-- Top Red Utility Bar -->
+        <div class="bg-secondary text-white text-xs sm:text-sm py-2 px-4 border-b border-white/10">
+            <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
+                <div class="hidden md:flex items-center gap-4 text-white/90">  
+                    <span class="flex items-center gap-1.5">
+                        <x-icons.email class="w-3.5 h-3.5" />
+                        <a href="mailto:jasolrelocation@gmail.com" class="hover:underline">jasolrelocation@gmail.com</a>
+                    </span>
+                </div>
+                <div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 text-center font-medium w-full md:w-auto">
+                    <span class="text-white/80 flex items-center gap-1">
+                        <x-icons.call class="w-3 h-3 text-white" />
+                    </span>
+                    <a href="tel:+917058332061" class="bg-white/15 hover:bg-white/25 transition-all px-2.5 py-0.5 rounded-full flex items-center gap-1 font-semibold">
+                        7058332061
+                    </a>
+                    <a href="tel:+918446105867" class="bg-white/15 hover:bg-white/25 transition-all px-2.5 py-0.5 rounded-full flex items-center gap-1 font-semibold">
+                        8446105867
+                    </a>
+                    <a href="tel:+919503493854" class="bg-white/15 hover:bg-white/25 transition-all px-2.5 py-0.5 rounded-full flex items-center gap-1 font-semibold">
+                        9503493854
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <div class="container mx-auto flex items-center justify-between py-3 px-4">
             <a href="/" class="flex items-center gap-2">
                 <img src="{{ asset('assets/images/logo.svg') }}" alt="Jasol Packers and Movers Logo" class="w-25">
@@ -187,7 +213,7 @@
             </nav>
         </div>
     </header>
-    <main class="pt-15">
+    <main class="pt-[116px] md:pt-[104px]">
         @yield('content')
     </main>
     <section class="py-12 bg-secondary overflow-hidden border-y border-white/5">
@@ -301,8 +327,8 @@
                         </li>
                         <li class="flex gap-2 items-center align-center">
                             <x-icons.call class="w-5 h-5 flex-shrink-0" />
-                            <a href="tel:+918446105867"
-                                class="hover:text-primary transition-colors">+91-8446105867</a>
+                            <a href="tel:+919503493854"
+                                class="hover:text-primary transition-colors">+91-95034 93854</a>
                         </li>
                         <li class="flex gap-2 items-center align-center">
                             <x-icons.email class="w-5 h-5 flex-shrink-0" />
