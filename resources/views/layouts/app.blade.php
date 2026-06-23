@@ -295,6 +295,16 @@
                                 class="hover:text-primary transition-colors">+91-{{ config('services.static.mobile') }}</a>
                         </li>
                         <li class="flex gap-2 items-center align-center">
+                            <x-icons.call class="w-5 h-5 flex-shrink-0" />
+                            <a href="tel:+918446105867"
+                                class="hover:text-primary transition-colors">+91-8446105867</a>
+                        </li>
+                        <li class="flex gap-2 items-center align-center">
+                            <x-icons.call class="w-5 h-5 flex-shrink-0" />
+                            <a href="tel:+918446105867"
+                                class="hover:text-primary transition-colors">+91-8446105867</a>
+                        </li>
+                        <li class="flex gap-2 items-center align-center">
                             <x-icons.email class="w-5 h-5 flex-shrink-0" />
                             <a href="mailto:{{ config('services.static.email') }}"
                                 class="hover:text-primary transition-colors">{{ config('services.static.email') }}</a>

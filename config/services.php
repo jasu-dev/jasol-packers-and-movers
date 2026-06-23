@@ -36,10 +36,10 @@ return [
     ],
 
     'static' => [
-        'mobile' => '7300293594',
+        'mobile' => '7058332061',
         'email' => 'jasolrelocation@gmail.com',
         'address' => 'Shop Number 06 Survey Number 261/3/2 Sakhare Dhawale Wasti Near flour mill Laxmi chowk, Hinjawadi Phase 2 Rd, Phase 1, Hinjawadi, Pune, Pimpri-Chinchwad, Maharashtra 411057',
-        'whatsapp' => '7300293594',
+        'whatsapp' => '7058332061',
         'facebook' => 'https://www.facebook.com/jasolrelocation',
         'instagram' => 'https://www.instagram.com/jasolrelocation',
         'twitter' => 'https://twitter.com/jasolrelocation',
