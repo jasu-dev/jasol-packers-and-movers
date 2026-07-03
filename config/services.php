@@ -48,5 +48,8 @@ return [
         'cities' => '500',
         'clients' => '10,000',
         'delivered' => '15,000',
+
+        'wakad-address' => 'Shop No.4,Near Shree Datta Krupa Battery, Laxmi Chowk Road, Vinode Wasti, Bhumkar Nagar, Wakad, Maharashtra 411057',
+        'baner-address' => 'Office No.412, Service Road, near Radha Chowk, next to EFC Prime, Baner, Pune, Maharashtra 411045',
     ],
 ];

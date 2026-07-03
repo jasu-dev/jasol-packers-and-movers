@@ -78,23 +78,27 @@
         <!-- Top Red Utility Bar -->
         <div class="bg-secondary text-white text-xs sm:text-sm py-2 px-4 border-b border-white/10">
             <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
-                <div class="hidden md:flex items-center gap-4 text-white/90">  
+                <div class="hidden md:flex items-center gap-4 text-white/90">
                     <span class="flex items-center gap-1.5">
                         <x-icons.email class="w-3.5 h-3.5" />
                         <a href="mailto:jasolrelocation@gmail.com" class="hover:underline">jasolrelocation@gmail.com</a>
                     </span>
                 </div>
-                <div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 text-center font-medium w-full md:w-auto">
+                <div
+                    class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 text-center font-medium w-full md:w-auto">
                     <span class="text-white/80 flex items-center gap-1">
                         <x-icons.call class="w-3 h-3 text-white" />
                     </span>
-                    <a href="tel:+917058332061" class="bg-white/15 hover:bg-white/25 transition-all px-2.5 py-0.5 rounded-full flex items-center gap-1 font-semibold">
+                    <a href="tel:+917058332061"
+                        class="bg-white/15 hover:bg-white/25 transition-all px-2.5 py-0.5 rounded-full flex items-center gap-1 font-semibold">
                         7058332061
                     </a>
-                    <a href="tel:+918446105867" class="bg-white/15 hover:bg-white/25 transition-all px-2.5 py-0.5 rounded-full flex items-center gap-1 font-semibold">
+                    <a href="tel:+918446105867"
+                        class="bg-white/15 hover:bg-white/25 transition-all px-2.5 py-0.5 rounded-full flex items-center gap-1 font-semibold">
                         8446105867
                     </a>
-                    <a href="tel:+919503493854" class="bg-white/15 hover:bg-white/25 transition-all px-2.5 py-0.5 rounded-full flex items-center gap-1 font-semibold">
+                    <a href="tel:+919503493854"
+                        class="bg-white/15 hover:bg-white/25 transition-all px-2.5 py-0.5 rounded-full flex items-center gap-1 font-semibold">
                         9503493854
                     </a>
                 </div>
@@ -242,8 +246,8 @@
         </div>
     </section>
     <footer class="bg-secondary text-secondary-foreground">
-        <div class="container mx-auto px-4 py-12">
-            <div class="grid md:grid-cols-4 gap-8">
+        <div class="container mx-auto px-4 pt-12 pb-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
                 <div>
                     <div class="inline-flex items-center gap-2 mb-4 bg-white px-8 py-4 rounded-lg w-auto">
@@ -312,10 +316,6 @@
                     <h3 class="text-lg font-semibold mb-4 text-secondary-foreground">Contact Info</h3>
                     <ul class="space-y-4 text-base text-secondary-foreground/60">
                         <li class="flex gap-2 items-center align-center">
-                            <x-icons.location class="w-5 h-5 flex-shrink-0" />
-                            {{ config('services.static.address') }}
-                        </li>
-                        <li class="flex gap-2 items-center align-center">
                             <x-icons.call class="w-5 h-5 flex-shrink-0" />
                             <a href="tel:+91{{ config('services.static.mobile') }}"
                                 class="hover:text-primary transition-colors">+91-{{ config('services.static.mobile') }}</a>
@@ -327,8 +327,8 @@
                         </li>
                         <li class="flex gap-2 items-center align-center">
                             <x-icons.call class="w-5 h-5 flex-shrink-0" />
-                            <a href="tel:+919503493854"
-                                class="hover:text-primary transition-colors">+91-95034 93854</a>
+                            <a href="tel:+919503493854" class="hover:text-primary transition-colors">+91-95034
+                                93854</a>
                         </li>
                         <li class="flex gap-2 items-center align-center">
                             <x-icons.email class="w-5 h-5 flex-shrink-0" />
@@ -338,6 +338,29 @@
                     </ul>
                 </div>
 
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mb-6">
+            <h3 class="text-lg font-semibold mb-4 text-secondary-foreground">Office Address</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 text-sm text-secondary-foreground/60">
+                <div>
+                    <p>
+                        <span class="text-secondary-foreground font-semibold">Hinjawadi :</span>
+                        {{ config('services.static.address') }}
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <span class="text-secondary-foreground font-semibold">Wakad :</span>
+                        {{ config('services.static.wakad-address') }}
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <span class="text-secondary-foreground font-semibold">Baner :</span>
+                        {{ config('services.static.baner-address') }}
+                    </p>
+                </div>
             </div>
         </div>
         <div class="border-t border-secondary-foreground/10 py-6">
