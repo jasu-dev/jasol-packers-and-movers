@@ -1,60 +1,47 @@
 @extends('layouts.app')
 
-@section('title', 'Best Packers and Movers in Hinjewadi Pune | Jasol Packers and Movers')
-
-@push('metas')
-    <meta name="title" content="Best Packers and Movers in Hinjewadi Pune | Jasol Packers and Movers">
-    <meta name="description"
-        content="Professional packers and movers in Hinjewadi. We offer reliable home shifting, office relocation, and storage services. Get a free quote today!">
-    <meta property="og:title" content="Best Packers and Movers in Hinjewadi Pune | Jasol Packers and Movers">
-    <meta property="og:description"
-        content="Professional relocation services in Hinjewadi. Safe, fast, and affordable shifting.">
-    <meta property="og:type" content="website">
-@endpush
-
-@push('schema')
-    <script type="application/ld+json">
-    @verbatim
-    {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Packers and Movers in Hinjewadi",
-        "item": "https://jasolpackersandmovers.in/"
-    }]
-    }
-    @endverbatim
-    </script>
-@endpush
+@section('title', 'Packers and Movers in Hinjewadi, Pune | Jasol Packers & Movers')
+@section('meta_description', 'Trusted packers and movers in Hinjewadi, Pune with offices in Wakad and Baner. Home shifting, office relocation and bike transport. Call +91-7058332061.')
 
 @section('content')
     <!-- Hero Section -->
     <section id="quote" class="relative min-h-screen flex items-center overflow-hidden">
 
         <div class="absolute inset-0 z-0">
-            <img src="{{ asset('assets/images/hero-bg.jpg') }}" alt="Professional movers loading a truck"
-                class="w-full h-full object-cover">
+            <img src="{{ asset('assets/images/hero-bg.jpg') }}" alt="Jasol Packers and Movers team loading packed household goods into a truck in Hinjewadi, Pune"
+                class="w-full h-full object-cover" width="1920" height="1080" fetchpriority="high" decoding="async">
             <div class="absolute inset-0 bg-secondary/90"></div>
         </div>
 
         <div class="container mx-auto px-4 relative z-10 py-12">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
 
-                <div data-aos="fade-right" data-aos-duration="700">
+                <div>
                     <span
                         class="inline-block bg-primary/20 text-primary-foreground text-sm font-medium px-4 py-1.5 rounded-full mb-6">
-                        #1 Rated Packers & Movers
+                        Jasol Packers &amp; Movers · Since 2015 · Offices in Hinjewadi, Wakad &amp; Baner
                     </span>
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-foreground leading-tight mb-6">
-                        Jasol <span class="text-primary">Packers and Movers</span> Services
-                        Hinjewadi, Pune
+                        Packers and Movers in <span class="text-primary">Hinjewadi, Pune</span>
                     </h1>
                     <p class="text-lg text-secondary-foreground/80 mb-8 max-w-lg">
-                        Top packers and movers in Hinjewadi, Pune, providing safe, affordable house shifting, office
-                        relocation, and vehicle transport with expert packing.
+                        Safe, affordable house shifting, office relocation and bike transport across Hinjewadi Phase 1, 2
+                        and 3, Wakad, Baner and all of Pune. Trained packers, GPS-tracked trucks and transparent pricing.
                     </p>
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <a href="tel:+91{{ config('services.static.mobile') }}">
+                            <x-ui.primary-button>
+                                <x-icons.call class="w-5 h-5" />
+                                Call +91-{{ config('services.static.mobile') }}
+                            </x-ui.primary-button>
+                        </a>
+                        <a href="https://wa.me/91{{ config('services.static.whatsapp') }}?text=Hi%2C%20I%20need%20a%20shifting%20quote" target="_blank" rel="noopener">
+                            <x-ui.secondary-button>
+                                <x-icons.whatsapp class="w-4 h-4" />
+                                WhatsApp Quote
+                            </x-ui.secondary-button>
+                        </a>
+                    </div>
                     <div class="flex flex-wrap gap-6 text-secondary-foreground/70 text-sm">
                         <span class="flex items-center gap-2">✓ Insured Moving</span>
                         <span class="flex items-center gap-2">✓ {{ config('services.static.cities') }}+ Cities</span>
@@ -102,11 +89,15 @@
                         <ul class="space-y-2 mb-6">
                             <li class="flex items-center gap-2">
                                 <x-icons.check class="w-5 h-5 text-primary" />
-                                Local shifting within Hinjewadi & Wakad
+                                Local shifting within Hinjewadi, <a href="{{ route('wakad') }}" class="text-primary font-semibold hover:underline">Wakad</a>, <a href="{{ route('baner') }}" class="text-primary font-semibold hover:underline">Baner</a> and <a href="{{ route('mahalunge') }}" class="text-primary font-semibold hover:underline">Mahalunge</a>
                             </li>
                             <li class="flex items-center gap-2">
                                 <x-icons.check class="w-5 h-5 text-primary" />
                                 Domestic relocation from Pune to anywhere in India
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <x-icons.check class="w-5 h-5 text-primary" />
+                                Bike and car transport from Pune with door-to-door pickup and delivery
                             </li>
                         </ul>
                     </div>
@@ -154,6 +145,9 @@
             </div>
         </div>
     </section>
+
+    {{-- Service areas / branch pages --}}
+    <x-service-areas />
 
     <!-- How We Work Section -->
     <x-how-we-work-section />
@@ -356,11 +350,11 @@
                             <x-icons.car
                                 class="w-8 h-8 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">Vehicle Transportation Services</h3>
+                        <h3 class="text-2xl font-bold mb-4">Bike and Car Transportation</h3>
                         <p class="text-muted-foreground leading-relaxed mb-4">
-                            Relocating outside of Pune? Our <b>car and bike transportation services in Hinjewadi</b> utilize
-                            specialized enclosed trailers to protect your vehicle from road debris and weather, ensuring
-                            doorstep delivery across India.
+                            Relocating outside of Pune? Our <b>bike and car transportation services from Hinjewadi</b> use
+                            dedicated vehicle carriers and closed containers to protect your vehicle from road debris and
+                            weather, with doorstep delivery across India.
                         </p>
                     </div>
                 </div>
@@ -587,9 +581,9 @@
                     </ul>
                 </div>
                 <div class="relative" data-aos="fade-left">
-                    <img src="{{ asset('assets/images/truck.jpeg') }}"
+                    <img src="{{ asset('assets/images/truck.jpeg') }}" width="1280" height="960" loading="lazy" decoding="async"
                         class="rounded-3xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
-                        alt="Packing material">
+                        alt="Jasol Packers and Movers truck loaded with packed household goods">
                     <div class="absolute -bottom-10 -left-10 bg-primary p-8 rounded-2xl hidden md:block">
                         <p class="text-4xl font-black italic">Zero</p>
                         <p class="text-sm font-bold uppercase tracking-widest">Damage Record</p>
@@ -609,7 +603,7 @@
                         What Our Customers Say
                     </h2>
                     <p class="text-slate-600 text-lg">
-                        Real reviews from people who moved with us.
+                        Real reviews from people who moved with us. <a href="{{ route('testimonials') }}" class="text-primary font-semibold hover:underline">Read all reviews</a>.
                     </p>
                 </div>
 
@@ -707,32 +701,6 @@
                         </div>
                     </div>
 
-                    <div class="swiper-slide !h-auto">
-                        <div
-                            class="flex flex-col h-full p-8 bg-card rounded-2xl border border-border card-hover cursor-pointer">
-                            <div class="flex gap-1 mb-6 text-orange-400">
-                                @for ($i = 0; $i < 5; $i++)
-                                    <x-icons.star class="w-5 h-5 fill-current" />
-                                @endfor
-                            </div>
-
-                            <p class="text-slate-700 text-lg leading-relaxed mb-8 flex-grow italic">
-                                "Professional staff and very transparent pricing. They made a stressful move very easy for
-                                my family."
-                            </p>
-
-                            <div class="flex items-center gap-4 pt-6 border-t border-slate-100 mt-auto">
-                                <div
-                                    class="w-12 h-12 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center font-bold">
-                                    AV</div>
-                                <div>
-                                    <h4 class="font-bold text-slate-900 leading-none mb-1">Amit Verma</h4>
-                                    <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Pune →
-                                        Delhi</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
 
@@ -742,156 +710,45 @@
     </section>
 
     {{-- faq section --}}
-    <section class="section-padding overflow-hidden bg-background">
-        <div class="container mx-auto max-w-4xl px-4">
-            <div class="text-center mb-12" data-aos="fade-up">
-                <h2 class="section-title">Hinjewadi Relocation <span class="text-primary">FAQs</span></h2>
-                <p class="section-subtitle">Everything you need to know about hiring packers and movers in Hinjewadi, Pune.
-                </p>
-            </div>
-
-            <div class="space-y-4" data-aos="fade-up" data-aos-delay="200">
-
-                <div class="faq-item border border-border rounded-xl px-6 bg-card card-hover">
-                    <button
-                        class="faq-trigger w-full py-5 flex items-center justify-between font-bold text-left focus:outline-none text-lg">
-                        <span>How much do packers and movers cost in Pune?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="faq-icon transition-transform duration-300">
-                            <path d="m6 9 6 6 6-6" />
-                        </svg>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <p class="pb-5 text-muted-foreground leading-relaxed">
-                            The cost of <b>packers and movers in Pune</b> typically ranges from ₹3,000 to ₹8,000 for a 1BHK
-                            local shift, and ₹10,000 to ₹25,000 for larger 3BHK homes. Prices vary based on the volume of
-                            goods, quality of packing materials, and the distance between locations like Hinjewadi to Wakad
-                            or Baner.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-item border border-border rounded-xl px-6 bg-card card-hover">
-                    <button
-                        class="faq-trigger w-full py-5 flex items-center justify-between font-bold text-left focus:outline-none text-lg">
-                        <span>What is the minimum charge for packers and movers in Hinjewadi?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="faq-icon transition-transform duration-300">
-                            <path d="m6 9 6 6 6-6" />
-                        </svg>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <p class="pb-5 text-muted-foreground leading-relaxed">
-                            At Jasol Packers, our minimum charge for small-scale shifting or few-item relocation in
-                            <b>Hinjewadi</b> starts as low as ₹2,000. This includes basic loading, transport, and unloading
-                            by
-                            our professional team.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-item border border-border rounded-xl px-6 bg-card card-hover">
-                    <button
-                        class="faq-trigger w-full py-5 flex items-center justify-between font-bold text-left focus:outline-none text-lg">
-                        <span>Why are companies leaving Hinjewadi, and does it affect moving services?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="faq-icon transition-transform duration-300">
-                            <path d="m6 9 6 6 6-6" />
-                        </svg>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <p class="pb-5 text-muted-foreground leading-relaxed">
-                            Some companies have shifted operations due to infrastructure and traffic concerns, but Hinjewadi
-                            remains a massive IT hub. This movement has actually increased the demand for <b>commercial
-                                office relocation</b> and employee home shifting services in the Pune West region.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-item border border-border rounded-xl px-6 bg-card card-hover">
-                    <button
-                        class="faq-trigger w-full py-5 flex items-center justify-between font-bold text-left focus:outline-none text-lg">
-                        <span>Which phase is best in Hinjewadi for residential living?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="faq-icon transition-transform duration-300">
-                            <path d="m6 9 6 6 6-6" />
-                        </svg>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <p class="pb-5 text-muted-foreground leading-relaxed">
-                            <b>Hinjewadi Phase 1</b> is highly preferred due to its proximity to the highway and better
-                            connectivity to Wakad. However, Phase 2 and 3 offer more premium, spacious gated societies. We
-                            provide specialized shifting services across all three phases, including high-rise apartment
-                            moving.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-item border border-border rounded-xl px-6 bg-card card-hover">
-                    <button
-                        class="faq-trigger w-full py-5 flex items-center justify-between font-bold text-left focus:outline-none text-lg">
-                        <span>How long does a local move within Hinjewadi take?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="faq-icon transition-transform duration-300">
-                            <path d="m6 9 6 6 6-6" />
-                        </svg>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <p class="pb-5 text-muted-foreground leading-relaxed">
-                            Most local shifts within <b>Hinjewadi, Pune</b> are completed within 4 to 8 hours. Our team
-                            ensures
-                            that your furniture is dismantled, packed, moved, and reassembled on the same day to minimize
-                            disruption to your IT work schedule.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-item border border-border rounded-xl px-6 bg-card card-hover">
-                    <button
-                        class="faq-trigger w-full py-5 flex items-center justify-between font-bold text-left focus:outline-none text-lg">
-                        <span>Are packers and movers available on weekends in Pune?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="faq-icon transition-transform duration-300">
-                            <path d="m6 9 6 6 6-6" />
-                        </svg>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <p class="pb-5 text-muted-relaxed">
-                            Yes, weekends are our busiest times. We recommend booking your <b>Hinjewadi shifting service</b>
-                            at
-                            least 3-4 days in advance for Saturday or Sunday moves to ensure slot availability.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-item border border-border rounded-xl px-6 bg-card card-hover">
-                    <button
-                        class="faq-trigger w-full py-5 flex items-center justify-between font-bold text-left focus:outline-none text-lg">
-                        <span>How do you handle fragile IT equipment during shifting?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="faq-icon transition-transform duration-300">
-                            <path d="m6 9 6 6 6-6" />
-                        </svg>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <p class="pb-5 text-muted-foreground leading-relaxed">
-                            As specialist <b>packers and movers in Hinjewadi, Pune</b>, we use anti-static bubble wrap and
-                            custom-sized crates for monitors, servers, and CPUs. Our staff is trained in the delicate
-                            handling of tech gear to ensure zero data or hardware damage.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
+    @php
+        $homeFaqs = [
+            [
+                'q' => 'How much do packers and movers cost in Hinjewadi, Pune?',
+                'a' => 'Local shifting in Hinjewadi usually costs <b>₹3,000 to ₹7,000 for a 1 BHK</b>, ₹5,000 to ₹10,000 for a 2 BHK and ₹8,000 to ₹15,000 for a 3 BHK. Pune to another city starts around ₹9,000 for a 1 BHK. The final price depends on the volume of goods, packing material, floor and lift access and the distance between locations such as Hinjewadi to Wakad or Baner. We give a fixed quote after a free phone or video survey.',
+            ],
+            [
+                'q' => 'What is the minimum charge for packers and movers in Hinjewadi?',
+                'a' => 'Our minimum charge for a few-item or single-room move within <b>Hinjewadi</b> starts at about ₹2,000. This includes loading, transport in a closed vehicle and unloading by our team. Packing material is charged only for what is used.',
+            ],
+            [
+                'q' => 'Do you serve Hinjewadi Phase 1, Phase 2 and Phase 3?',
+                'a' => 'Yes. Our head office is near Laxmi Chowk on the Hinjawadi Phase 2 Road, so we reach all three phases quickly. We regularly shift homes in societies such as Blue Ridge, Megapolis, Life Republic, Xrbia, Kolte Patil Life Republic and the Marunji and Maan side of Phase 3, and we know their move-in timings and lift booking rules.',
+            ],
+            [
+                'q' => 'How long does a local move within Hinjewadi take?',
+                'a' => 'Most local shifts within <b>Hinjewadi or to Wakad and Baner</b> are completed in 4 to 8 hours. For a 2 BHK we typically arrive by 8 AM, finish packing and loading by noon and unload and reassemble furniture the same afternoon.',
+            ],
+            [
+                'q' => 'Are packers and movers available on weekends and month-ends in Pune?',
+                'a' => 'Yes, weekends and the last few days of the month are our busiest times. We recommend booking your <b>Hinjewadi shifting</b> at least 3 to 4 days in advance for Saturday, Sunday or month-end moves so a crew and truck are reserved for you.',
+            ],
+            [
+                'q' => 'Do you provide bike transport from Hinjewadi?',
+                'a' => 'Yes. We pick up two-wheelers from Hinjewadi, Wakad, Baner or anywhere in Pune, pack them with bubble wrap and corrugated sheets and send them in dedicated carriers to cities across India. Pune to Mumbai bike transport starts at about ₹2,500 and takes 1 to 2 days; call us with your bike model and destination for an exact quote.',
+            ],
+            [
+                'q' => 'How do you handle fragile items and IT equipment during shifting?',
+                'a' => 'We use anti-static bubble wrap, foam sheets and custom-sized cartons for monitors, laptops, TVs and kitchen glassware, and wooden crating for antiques or large glass. Every carton is labelled by room so unpacking is quick and nothing is misplaced.',
+            ],
+            [
+                'q' => 'Is transit insurance available for household shifting?',
+                'a' => 'Yes. We offer goods-in-transit insurance on request, with the premium based on the declared value of your goods. For long-distance moves from Pune and for high-value electronics or furniture we recommend taking it.',
+            ],
+        ];
+    @endphp
+    <x-faq-section heading="Hinjewadi Relocation <span class='text-primary'>FAQs</span>"
+        subheading="Everything you need to know about hiring packers and movers in Hinjewadi, Pune."
+        :faqs="$homeFaqs" />
 
     <x-map-section />
 @endsection

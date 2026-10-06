@@ -1,8 +1,8 @@
 <form id="quoteForm" action="{{ route('quote.store') }}" method="POST" class="space-y-4">
     @csrf
-    <h2 class="text-3xl font-bold text-card-foreground mb-2">
+    <p class="text-3xl font-bold text-card-foreground mb-2">
         Get a Free <span class="text-primary">Quote</span>
-    </h2>
+    </p>
     <p class="text-sm text-muted-foreground mb-4">Fill the form below and get a callback within 30
         minutes</p>
 
@@ -35,6 +35,7 @@
             <option value="" disabled selected>Service Required</option>
             <option value="House Relocation">House Relocation</option>
             <option value="Office Relocation">Office Relocation</option>
+            <option value="Bike Transport">Bike Transport</option>
             <option value="Car Transportation">Car Transportation</option>
             <option value="Loading & Unloading">Loading & Unloading</option>
             <option value="Pet Relocation">Pet Relocation</option>

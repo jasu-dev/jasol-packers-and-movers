@@ -71,6 +71,7 @@ const initAccordions = () => {
             document.querySelectorAll('.faq-icon').forEach(i => {
                 if (i) i.style.transform = 'rotate(0deg)';
             });
+            triggers.forEach(t => t.setAttribute('aria-expanded', 'false'));
 
             // If it wasn't open, open it now
             if (!isOpen) {
@@ -80,6 +81,7 @@ const initAccordions = () => {
                 content.style.paddingBottom = "24px"; 
                 
                 if (icon) icon.style.transform = 'rotate(180deg)';
+                trigger.setAttribute('aria-expanded', 'true');
             }
         });
     });

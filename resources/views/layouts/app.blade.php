@@ -4,23 +4,166 @@
         'packers-and-movers-baner' => 'Baner',
         'packers-and-movers-mahalunge' => 'Mahalunge',
     ];
-@endphp
+    $isBranchPage = request()->is(array_keys($branches));
 
+    $siteName = 'Jasol Packers and Movers';
+    $siteUrl = 'https://jasolpackersandmovers.in';
+    $primaryPhone = config('services.static.mobile');
+
+    // Inline @section('x', 'value') content is escaped by Blade, so decode here before the template re-escapes it.
+    $pageTitle = html_entity_decode(trim($__env->yieldContent('title', 'Packers and Movers in Hinjewadi, Pune | Jasol Packers & Movers')), ENT_QUOTES, 'UTF-8');
+    $metaDescription = html_entity_decode(trim(preg_replace('/\s+/', ' ', $__env->yieldContent('meta_description',
+        'Jasol Packers and Movers offers safe, affordable home shifting, office relocation and bike transport across Hinjewadi, Wakad, Baner and Pune. Call +91-' . $primaryPhone . ' for a free quote.'))), ENT_QUOTES, 'UTF-8');
+    $ogImage = $__env->yieldContent('og_image', asset('assets/images/banner.png'));
+    $ogType = trim($__env->yieldContent('og_type', 'website'));
+    $canonical = url()->current();
+
+    // Organisation + offices graph (single source of truth: config/services.php)
+    $offices = collect(config('services.branches'))->map(function ($office, $key) use ($siteUrl, $primaryPhone) {
+        $node = [
+            '@type' => 'MovingCompany',
+            '@id' => $siteUrl . '/#office-' . $key,
+            'name' => $office['name'],
+            'parentOrganization' => ['@id' => $siteUrl . '/#organization'],
+            'url' => $siteUrl . ($office['route'] === 'home' ? '/' : route($office['route'], [], false)),
+            'telephone' => '+91-' . $office['phone'],
+            'image' => $siteUrl . '/assets/images/banner.png',
+            'priceRange' => '₹₹',
+            'address' => [
+                '@type' => 'PostalAddress',
+                'streetAddress' => $office['street'],
+                'addressLocality' => $office['area'] . ', ' . $office['city'],
+                'addressRegion' => 'Maharashtra',
+                'postalCode' => $office['postal'],
+                'addressCountry' => 'IN',
+            ],
+            'hasMap' => $office['map_link'],
+            'openingHoursSpecification' => [
+                '@type' => 'OpeningHoursSpecification',
+                'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                'opens' => '07:00',
+                'closes' => '22:00',
+            ],
+            'areaServed' => ['@type' => 'Place', 'name' => $office['locality'] . ', Pune'],
+        ];
+        if (!empty($office['geo'])) {
+            $node['geo'] = [
+                '@type' => 'GeoCoordinates',
+                'latitude' => $office['geo']['lat'],
+                'longitude' => $office['geo']['lng'],
+            ];
+        }
+        return $node;
+    })->values()->all();
+
+    $serviceCatalog = [
+        'Household Shifting', 'Office Relocation', 'Local Shifting within Pune', 'Domestic Relocation (Pune to anywhere in India)',
+        'Bike Transport', 'Car Transportation', 'Packing and Unpacking', 'Loading and Unloading', 'Warehouse and Storage',
+    ];
+
+    $organizationSchema = [
+        '@context' => 'https://schema.org',
+        '@graph' => array_merge([
+            [
+                '@type' => 'MovingCompany',
+                '@id' => $siteUrl . '/#organization',
+                'name' => $siteName,
+                'alternateName' => ['Jasol Packers & Movers', 'Jasol Bike Transport', 'Jasol Relocation'],
+                'url' => $siteUrl . '/',
+                'logo' => [
+                    '@type' => 'ImageObject',
+                    'url' => $siteUrl . '/assets/images/logo.svg',
+                ],
+                'image' => $siteUrl . '/assets/images/banner.png',
+                'description' => 'Jasol Packers and Movers is a Pune-based relocation company with offices in Hinjewadi, Wakad and Baner. We provide household shifting, office relocation, bike and car transport, packing, loading and storage services across Pune and India.',
+                'foundingDate' => '2015',
+                'telephone' => '+91-' . $primaryPhone,
+                'email' => config('services.static.email'),
+                'priceRange' => '₹₹',
+                'currenciesAccepted' => 'INR',
+                'paymentAccepted' => 'Cash, UPI, Bank Transfer',
+                'address' => $offices[0]['address'],
+                'geo' => $offices[0]['geo'] ?? null,
+                'hasMap' => $offices[0]['hasMap'],
+                'openingHoursSpecification' => $offices[0]['openingHoursSpecification'],
+                'contactPoint' => array_map(fn($phone) => [
+                    '@type' => 'ContactPoint',
+                    'telephone' => '+91-' . $phone,
+                    'contactType' => 'customer service',
+                    'areaServed' => 'IN',
+                    'availableLanguage' => ['English', 'Hindi', 'Marathi'],
+                ], config('services.static.phones')),
+                'sameAs' => [
+                    'https://www.facebook.com/JasolPackersandmovers',
+                    'https://www.instagram.com/jasol_packers_and_movers',
+                ],
+                'areaServed' => array_map(fn($area) => ['@type' => 'Place', 'name' => $area . ($area === 'Pune' ? '' : ', Pune')], config('services.service_areas')),
+                'hasOfferCatalog' => [
+                    '@type' => 'OfferCatalog',
+                    'name' => 'Packing and Moving Services',
+                    'itemListElement' => array_map(fn($service) => [
+                        '@type' => 'Offer',
+                        'itemOffered' => ['@type' => 'Service', 'name' => $service, 'provider' => ['@id' => $siteUrl . '/#organization']],
+                    ], $serviceCatalog),
+                ],
+                'location' => array_map(fn($office) => ['@id' => $office['@id']], $offices),
+            ],
+            [
+                '@type' => 'WebSite',
+                '@id' => $siteUrl . '/#website',
+                'url' => $siteUrl . '/',
+                'name' => $siteName,
+                'inLanguage' => 'en-IN',
+                'publisher' => ['@id' => $siteUrl . '/#organization'],
+            ],
+            [
+                '@type' => 'WebPage',
+                '@id' => $canonical . '#webpage',
+                'url' => $canonical,
+                'name' => $pageTitle,
+                'description' => $metaDescription,
+                'inLanguage' => 'en-IN',
+                'isPartOf' => ['@id' => $siteUrl . '/#website'],
+                'about' => ['@id' => $siteUrl . '/#organization'],
+                'primaryImageOfPage' => ['@type' => 'ImageObject', 'url' => $ogImage],
+            ],
+        ], $offices),
+    ];
+    $organizationSchema['@graph'][0] = array_filter($organizationSchema['@graph'][0], fn($v) => $v !== null);
+@endphp
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Jasol Packers and Movers Hinjewadi, Pune')</title>
-    <!--Design and developed by Tejaldigital.in-->
-    <meta name="robots" content="index, follow">
-    @stack('metas')
-    <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:image" content="{{ asset('assets/images/banner.png') }}">
+    <title>{{ $pageTitle }}</title>
+    <meta name="description" content="{{ $metaDescription }}">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="{{ $canonical }}">
     <meta name="google-site-verification" content="yF9T_fngjBbkTcELQnfGkvSiOrIR8OM9PqjgJmhfwQ0" />
-    <link rel="canonical" href="{{ url()->current() }}">
-    <!--Design and developed by Tejaldigital.in-->
+    <meta name="geo.region" content="IN-MH">
+    <meta name="geo.placename" content="Pune">
+    <meta name="theme-color" content="#424243">
+
+    {{-- Open Graph / Twitter --}}
+    <meta property="og:type" content="{{ $ogType }}">
+    <meta property="og:site_name" content="{{ $siteName }}">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:url" content="{{ $canonical }}">
+    <meta property="og:title" content="{{ $pageTitle }}">
+    <meta property="og:description" content="{{ $metaDescription }}">
+    <meta property="og:image" content="{{ $ogImage }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{{ $siteName }} - packing and moving services in Pune">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $pageTitle }}">
+    <meta name="twitter:description" content="{{ $metaDescription }}">
+    <meta name="twitter:image" content="{{ $ogImage }}">
+    @stack('metas')
+
+    <link rel="icon" href="{{ asset('favicon.ico') }}" sizes="any">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
@@ -28,48 +171,8 @@
     {{-- Vite resources --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('header-scripts')
-    <script type="application/ld+json">
-    @verbatim
-    {
-    "@context": "https://schema.org",
-    "@graph": [
-        {
-        "@type": "MovingCompany",
-        "@id": "https://jasolpackersandmovers.in/#organization",
-        "name": "Jasol Packers and Movers",
-        "url": "https://jasolpackersandmovers.in/",
-        "logo": "https://jasolpackersandmovers.in/assets/images/logo.svg",
-        "telephone": "+91-7300293594",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Shop Number 06, Survey Number 261/3/2,  Sakhare Dhawale Wasti Near flour mill Laxmi chowk, Hinjawadi Phase 2 Road",
-            "addressLocality": "Hinjewadi Phase 1",
-            "addressRegion": "Pune, Pimpri-Chinchwad, Maharashtra",
-            "postalCode": "411057",
-            "addressCountry": "IN"
-        },
-        "sameAs": [
-            "https://www.facebook.com/JasolPackersandmovers",
-            "https://www.instagram.com/jasol_packers_and_movers"
-        ],
-        "areaServed": [
-            { "@type": "City", "name": "Hinjewadi" },
-            { "@type": "City", "name": "Wakad" },
-            { "@type": "City", "name": "Baner" },
-            { "@type": "City", "name": "Mahalunge" }
-        ]
-        },
-        {
-        "@type": "WebSite",
-        "@id": "https://jasolpackersandmovers.in/#website",
-        "url": "https://jasolpackersandmovers.in/",
-        "name": "Jasol Packers and Movers",
-        "publisher": { "@id": "https://jasolpackersandmovers.in/#organization" }
-        }
-    ]
-    }
-    @endverbatim
-    </script>
+
+    <script type="application/ld+json">{!! json_encode($organizationSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
     @stack('schema')
 </head>
 
@@ -137,8 +240,8 @@
                 </a>
 
                 <div class="relative group">
-                    <button
-                        class="flex items-center gap-1 text-sm font-medium transition-colors {{ request()->is('branches*') ? 'text-primary' : 'text-foreground/80 group-hover:text-primary' }}">
+                    <button type="button" aria-haspopup="true"
+                        class="flex items-center gap-1 text-sm font-medium transition-colors {{ $isBranchPage ? 'text-primary' : 'text-foreground/80 group-hover:text-primary' }}">
                         Branches
                         <x-icons.down class="transition-transform group-hover:rotate-180" />
                     </button>
@@ -146,9 +249,9 @@
                         class="absolute left-0 top-full pt-2 hidden group-hover:block min-w-[160px] animate-in fade-in slide-in-from-top-1 z-50">
                         <div class="bg-white border border-border rounded-lg shadow-xl py-2 flex flex-col">
                             @foreach ($branches as $slug => $name)
-                                <a href="{{ $slug }}"
+                                <a href="{{ url($slug) }}"
                                     class="px-4 py-2 text-sm transition-colors {{ request()->is($slug) ? 'bg-primary/5 text-primary font-semibold' : 'text-foreground/80 hover:bg-slate-50 hover:text-primary' }}">
-                                    {{ $name }}
+                                    Packers and Movers in {{ $name }}
                                 </a>
                             @endforeach
                         </div>
@@ -168,7 +271,7 @@
                 </a>
             </div>
 
-            <button id="mobile-menu-toggle" class="lg:hidden p-2 text-foreground">
+            <button id="mobile-menu-toggle" type="button" class="lg:hidden p-2 text-foreground" aria-label="Toggle navigation menu" aria-controls="mobile-menu" aria-expanded="false">
                 <x-icons.menu id="menu-icon" class="w-6 h-6" />
                 <x-icons.close id="close-icon" class="hidden w-6 h-6" />
             </button>
@@ -192,9 +295,9 @@
                     </span>
                     <div class="pl-4 flex flex-col gap-1 border-l-2 border-slate-100 ml-3">
                         @foreach ($branches as $slug => $name)
-                            <a href="{{ $slug }}"
+                            <a href="{{ url($slug) }}"
                                 class="px-3 py-2 text-sm rounded-md transition-colors {{ request()->is($slug) ? 'text-primary font-semibold' : 'text-foreground/80 hover:text-primary' }}">
-                                {{ $name }}
+                                Packers and Movers in {{ $name }}
                             </a>
                         @endforeach
                     </div>
@@ -255,19 +358,19 @@
                             class="w-20">
                     </div>
                     <p class="text-secondary-foreground/60 text-base mb-4">
-                        India's trusted packers and movers providing safe, reliable and affordable relocation
-                        services since 2015.
+                        Pune's trusted packers and movers since 2015. Offices in Hinjewadi, Wakad and Baner for safe,
+                        affordable home shifting, office relocation and bike transport across India.
                     </p>
                     <div class="flex gap-3">
-                        <a href="https://www.facebook.com/JasolPackersandmovers"
+                        <a href="https://www.facebook.com/JasolPackersandmovers" target="_blank" rel="noopener" aria-label="Jasol Packers and Movers on Facebook"
                             class="w-9 h-9 rounded-full bg-secondary-foreground/10 flex items-center justify-center hover:bg-primary transition-colors group">
                             <x-icons.facebook class="w-4 h-4 group-hover:text-primary-foreground transition-colors" />
                         </a>
-                        <a href="https://www.instagram.com/jasol_packers_and_movers"
+                        <a href="https://www.instagram.com/jasol_packers_and_movers" target="_blank" rel="noopener" aria-label="Jasol Packers and Movers on Instagram"
                             class="w-9 h-9 rounded-full bg-secondary-foreground/10 flex items-center justify-center hover:bg-primary transition-colors group">
                             <x-icons.instagram class="w-4 h-4 group-hover:text-primary-foreground transition-colors" />
                         </a>
-                        <a href="https://wa.me/91{{ config('services.static.mobile') }}"
+                        <a href="https://wa.me/91{{ config('services.static.mobile') }}" target="_blank" rel="noopener" aria-label="Chat with Jasol Packers and Movers on WhatsApp"
                             class="w-9 h-9 rounded-full bg-secondary-foreground/10 flex items-center justify-center hover:bg-primary transition-colors group">
                             <x-icons.whatsapp class="w-4 h-4 group-hover:text-primary-foreground transition-colors" />
                         </a>
@@ -301,12 +404,16 @@
                 </div>
 
                 <div>
-                    <h3 class="text-lg font-semibold mb-4 text-secondary-foreground">Our Branches</h3>
+                    <h3 class="text-lg font-semibold mb-4 text-secondary-foreground">Services &amp; Branches</h3>
                     <ul class="space-y-2 text-base text-secondary-foreground/60">
+                        <li>
+                            <a href="{{ route('home') }}#services"
+                                class="hover:text-primary transition-colors">Packers and Movers in Hinjewadi</a>
+                        </li>
                         @foreach ($branches as $slug => $name)
                             <li>
-                                <a href="{{ $slug }}"
-                                    class="hover:text-primary transition-colors">{{ $name }}</a>
+                                <a href="{{ url($slug) }}"
+                                    class="hover:text-primary transition-colors">Packers and Movers in {{ $name }}</a>
                             </li>
                         @endforeach
                     </ul>
@@ -327,8 +434,7 @@
                         </li>
                         <li class="flex gap-2 items-center align-center">
                             <x-icons.call class="w-5 h-5 flex-shrink-0" />
-                            <a href="tel:+919503493854" class="hover:text-primary transition-colors">+91-95034
-                                93854</a>
+                            <a href="tel:+919503493854" class="hover:text-primary transition-colors">+91-9503493854</a>
                         </li>
                         <li class="flex gap-2 items-center align-center">
                             <x-icons.email class="w-5 h-5 flex-shrink-0" />
@@ -340,32 +446,22 @@
 
             </div>
         </div>
-        <div class="max-w-7xl mx-auto mb-6">
-            <h3 class="text-lg font-semibold mb-4 text-secondary-foreground">Office Address</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 text-sm text-secondary-foreground/60">
-                <div>
-                    <p>
-                        <span class="text-secondary-foreground font-semibold">Hinjawadi :</span>
-                        {{ config('services.static.address') }}
-                    </p>
-                </div>
-                <div>
-                    <p>
-                        <span class="text-secondary-foreground font-semibold">Wakad :</span>
-                        {{ config('services.static.wakad-address') }}
-                    </p>
-                </div>
-                <div>
-                    <p>
-                        <span class="text-secondary-foreground font-semibold">Baner :</span>
-                        {{ config('services.static.baner-address') }}
-                    </p>
-                </div>
+        <div class="container mx-auto px-4 mb-6">
+            <h3 class="text-lg font-semibold mb-4 text-secondary-foreground">Our Offices in Pune</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-sm text-secondary-foreground/60">
+                @foreach (config('services.branches') as $key => $office)
+                    <address class="not-italic">
+                        <span class="text-secondary-foreground font-semibold">{{ $office['locality'] }}{{ $key === 'hinjewadi' ? ' (Head Office)' : '' }}:</span>
+                        {{ $office['street'] }}, {{ $office['area'] }}, {{ $office['city'] }}, Maharashtra {{ $office['postal'] }}.
+                        <a href="{{ $office['map_link'] }}" target="_blank" rel="noopener" class="text-primary hover:underline whitespace-nowrap">Directions</a>
+                    </address>
+                @endforeach
             </div>
+            <p class="mt-4 text-sm text-secondary-foreground/60">{{ config('services.static.hours_label') }}</p>
         </div>
         <div class="border-t border-secondary-foreground/10 py-6">
             <p class="text-center text-base text-secondary-foreground/40">
-                © 2026 Jasol Packers and Movers. Developed by <a href="https://tejaldigital.in/" target="_blank"
+                © 2026 Jasol Packers and Movers. Developed by <a href="https://tejaldigital.in/" target="_blank" rel="noopener nofollow"
                     class="hover:text-primary transition-colors">Tejaldigital</a>
             </p>
         </div>
@@ -380,8 +476,8 @@
             </div>
         </div>
 
-        <a href="https://wa.me/91{{ config('services.static.mobile') }}?text=Hello!" target="_blank"
-            class="relative flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-2xl hover:scale-110 transition-transform duration-300">
+        <a href="https://wa.me/91{{ config('services.static.mobile') }}?text=Hello!" target="_blank" rel="noopener"
+            aria-label="Chat on WhatsApp" class="relative flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-2xl hover:scale-110 transition-transform duration-300">
 
             <span class="absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-75 animate-ping"></span>
 
@@ -399,6 +495,7 @@
 
         toggleBtn.addEventListener('click', () => {
             const isHidden = mobileMenu.classList.contains('hidden');
+            toggleBtn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
             if (isHidden) {
                 mobileMenu.classList.remove('hidden');
                 menuIcon.classList.add('hidden');

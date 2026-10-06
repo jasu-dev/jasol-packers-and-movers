@@ -1,62 +1,17 @@
 @extends('layouts.app')
 
-@section('title', 'Customer Reviews & Testimonials | Jasol Packers and Movers')
-
-@push('metas')
-    <meta name="title" content="Customer Reviews & Testimonials | Jasol Packers and Movers">
-    <meta name="description"
-        content="Read what our happy customers say about Jasol Packers and Movers. Verified reviews for home shifting and office relocation services in Hinjewadi and Pune.">
-    <meta property="og:title" content="Customer Reviews & Testimonials | Jasol Packers and Movers">
-    <meta property="og:description"
-        content="Read what our happy customers say about Jasol Packers and Movers. Verified reviews for home shifting and office relocation services in Hinjewadi and Pune.">
-    <meta property="og:type" content="website">
-@endpush
-
-@push('schema')
-    <script type="application/ld+json">
-        @verbatim
-        {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Jasol Packers and Movers Testimonials",
-        "description": "Read verified customer reviews and testimonials for Jasol Packers and Movers in Pune.",
-        "url": "https://jasolpackersandmovers.in/testimonials",
-        "publisher": {
-            "@id": "https://jasolpackersandmovers.in/#organization"
-        },
-        "breadcrumb": {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://jasolpackersandmovers.in/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Testimonials",
-                "item": "https://jasolpackersandmovers.in/testimonials"
-            }
-            ]
-        }
-        }
-        @endverbatim
-    </script>
-@endpush
+@section('title', 'Customer Reviews | Jasol Packers and Movers Pune')
+@section('meta_description', 'Read customer reviews of Jasol Packers and Movers for home shifting, office relocation and bike transport from Pune, Hinjewadi, Wakad and Baner.')
 
 @section('content')
     <section class="relative bg-secondary py-20 px-4 overflow-hidden">
         <div class="container mx-auto text-center relative z-10">
-            <nav class="flex justify-center gap-2 text-primary text-sm font-medium mb-4 uppercase tracking-widest">
-                <a href="/">Home</a> <span>/</span> <span class="text-white/60">Testimonials</span>
-            </nav>
+            <x-breadcrumbs :items="[['name' => 'Customer Reviews']]" class="mb-4" />
             <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6">
-                Trusted by <span class="text-primary">Thousands</span>
+                Jasol Packers and Movers <span class="text-primary">Reviews</span>
             </h1>
             <p class="text-white/70 max-w-2xl mx-auto text-lg leading-relaxed">
-                Read real stories from families and businesses we've helped relocate across India.
+                Real stories from families and businesses we've helped relocate from Pune and across India.
             </p>
         </div>
     </section>
@@ -83,7 +38,7 @@
                                 class="w-12 h-12 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center font-bold">
                                 SM</div>
                             <div>
-                                <h4 class="font-bold text-slate-900 leading-none mb-1">Sandeep Mehta</h4>
+                                <p class="font-bold text-slate-900 leading-none mb-1">Sandeep Mehta</p>
                                 <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Jaipur →
                                     Noida</span>
                             </div>
@@ -110,7 +65,7 @@
                                 class="w-12 h-12 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center font-bold">
                                 NG</div>
                             <div>
-                                <h4 class="font-bold text-slate-900 leading-none mb-1">Neha Gupta</h4>
+                                <p class="font-bold text-slate-900 leading-none mb-1">Neha Gupta</p>
                                 <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Chandigarh →
                                     Mumbai</span>
                             </div>
@@ -137,7 +92,7 @@
                                 class="w-12 h-12 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center font-bold">
                                 RS</div>
                             <div>
-                                <h4 class="font-bold text-slate-900 leading-none mb-1">Rohit Sharma</h4>
+                                <p class="font-bold text-slate-900 leading-none mb-1">Rohit Sharma</p>
                                 <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Delhi →
                                     Pune</span>
                             </div>
@@ -164,7 +119,7 @@
                                 class="w-12 h-12 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center font-bold">
                                 AK</div>
                             <div>
-                                <h4 class="font-bold text-slate-900 leading-none mb-1">Ankit Khanna</h4>
+                                <p class="font-bold text-slate-900 leading-none mb-1">Ankit Khanna</p>
                                 <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Lucknow →
                                     Gurgaon</span>
                             </div>
@@ -191,7 +146,7 @@
                                 class="w-12 h-12 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center font-bold">
                                 PS</div>
                             <div>
-                                <h4 class="font-bold text-slate-900 leading-none mb-1">Pooja Singh</h4>
+                                <p class="font-bold text-slate-900 leading-none mb-1">Pooja Singh</p>
                                 <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Indore →
                                     Delhi</span>
                             </div>
@@ -218,7 +173,7 @@
                                 class="w-12 h-12 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center font-bold">
                                 VK</div>
                             <div>
-                                <h4 class="font-bold text-slate-900 leading-none mb-1">Vikas Kumar</h4>
+                                <p class="font-bold text-slate-900 leading-none mb-1">Vikas Kumar</p>
                                 <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Patna →
                                     Bangalore</span>
                             </div>
@@ -244,7 +199,7 @@
                                 class="w-12 h-12 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center font-bold">
                                 MJ</div>
                             <div>
-                                <h4 class="font-bold text-slate-900 leading-none mb-1">Manish Jain</h4>
+                                <p class="font-bold text-slate-900 leading-none mb-1">Manish Jain</p>
                                 <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Surat →
                                     Delhi</span>
                             </div>
@@ -270,7 +225,7 @@
                                 class="w-12 h-12 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center font-bold">
                                 RA</div>
                             <div>
-                                <h4 class="font-bold text-slate-900 leading-none mb-1">Ritu Arora</h4>
+                                <p class="font-bold text-slate-900 leading-none mb-1">Ritu Arora</p>
                                 <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Delhi →
                                     Chennai</span>
                             </div>
@@ -296,7 +251,7 @@
                                 class="w-12 h-12 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center font-bold">
                                 SP</div>
                             <div>
-                                <h4 class="font-bold text-slate-900 leading-none mb-1">Sanjay Patel</h4>
+                                <p class="font-bold text-slate-900 leading-none mb-1">Sanjay Patel</p>
                                 <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Ahmedabad →
                                     Jaipur</span>
                             </div>
@@ -322,7 +277,7 @@
                                 class="w-12 h-12 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center font-bold">
                                 KD</div>
                             <div>
-                                <h4 class="font-bold text-slate-900 leading-none mb-1">Kiran Desai</h4>
+                                <p class="font-bold text-slate-900 leading-none mb-1">Kiran Desai</p>
                                 <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Nagpur →
                                     Hyderabad</span>
                             </div>
@@ -348,7 +303,7 @@
                                 class="w-12 h-12 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center font-bold">
                                 TJ</div>
                             <div>
-                                <h4 class="font-bold text-slate-900 leading-none mb-1">Tarun Joshi</h4>
+                                <p class="font-bold text-slate-900 leading-none mb-1">Tarun Joshi</p>
                                 <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Bhopal →
                                     Delhi</span>
                             </div>
@@ -374,7 +329,7 @@
                                 class="w-12 h-12 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center font-bold">
                                 AS</div>
                             <div>
-                                <h4 class="font-bold text-slate-900 leading-none mb-1">Anjali Saxena</h4>
+                                <p class="font-bold text-slate-900 leading-none mb-1">Anjali Saxena</p>
                                 <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Kanpur →
                                     Gurgaon</span>
                             </div>
@@ -388,7 +343,8 @@
     <section class="py-16 bg-primary overflow-hidden relative">
         <div class="container mx-auto px-4 text-center relative z-10">
             <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Want a seamless moving experience?</h2>
-            <a href="/contact"
+            <p class="text-white/80 mb-8 max-w-xl mx-auto">Get a free quote from our <a href="{{ route('home') }}" class="underline">Hinjewadi</a>, <a href="{{ route('wakad') }}" class="underline">Wakad</a> or <a href="{{ route('baner') }}" class="underline">Baner</a> office today.</p>
+            <a href="{{ route('contact') }}"
                 class="inline-flex items-center justify-center px-8 py-3.5 bg-white text-primary font-bold rounded-lg hover:bg-slate-100 transition-colors shadow-lg">
                 Join our Happy Customers
             </a>

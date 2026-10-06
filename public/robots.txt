@@ -1,2 +1,5 @@
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /quote
+
+Sitemap: https://jasolpackersandmovers.in/sitemap.xml
